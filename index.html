@@ -1,0 +1,769 @@
+<!DOCTYPE HTML>
+
+<html>
+
+	<head>
+		<title>Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+
+		<link rel="stylesheet" href="css/main.css"/>
+		<link rel="stylesheet" href="css/fontawesome-all.min.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		
+		<noscript>
+			<link rel="stylesheet" href="css/noscript.css" />
+		</noscript>
+
+		<!-- Magnific Popup core CSS file -->
+		<link rel="stylesheet" href="magnific/magnific-popup.css">
+
+		<!-- jQuery CDN -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+		
+		<!-- Magnific Popup core JS file -->
+		<script src="magnific/jquery.magnific-popup.js"></script>
+
+		<!--D3 javascript libary-->
+		<script src="https://d3js.org/d3.v3.min.js"></script>
+		<link rel="stylesheet" href="scripts/ball.js">
+
+		<style>
+
+			#banner_canvas{
+				position: absolute;
+    			left: 0;
+    			top: 0;
+			}
+
+			.containerpic {
+			position: relative;
+			width: 100%;
+			}
+
+			.pic {
+			display: block;
+			width: 100%;
+			height: auto;
+			}
+
+			.overlaypic {
+			position: absolute;
+			display: flex;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background-color: #f3f6fa;
+			overflow: hidden;
+			width: 100%;
+			height: 100%;
+			-webkit-transform: scale(0);
+			-ms-transform: scale(0);
+			transform: scale(0);
+			-webkit-transition: .5s ease;
+			transition: .5s ease;
+			cursor: pointer;
+			border-radius: 2px
+			}
+
+			.containerpic:hover .overlaypic {
+			-webkit-transform: scale(1);
+			-ms-transform: scale(1);
+			transform: scale(1);
+			}
+
+			.grid-container {
+			display: grid;
+			grid-template-columns: auto auto;
+			}
+			.grid-item {
+			background-color: rgba(255, 255, 255, 0.8);
+			border: 1px solid rgba(0, 0, 0, 0.8);
+			padding: 20px;
+			font-size: 30px;
+			text-align: center;
+			}
+
+		</style>
+
+	</head>
+
+	<body class="index is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header" class="alt">
+					<h1 id="logo"><a href="index.html"><span>Martin J Boer</span></a></h1>
+					<nav id="nav">
+						<ul>
+							<li class="current"><a href="#projects">Projects</a></li>
+							<li class="current"><a href="#clients">Clients</a></li>
+							<li class="current"><a href="#cta">Contacts</a></li>
+						</ul>
+					</nav>
+				</header>
+				
+			<!-- Banner -->
+				<section id="banner">
+
+					<div class="inner" style="position: relative; z-index: 1;">
+
+						<header>
+							<h2>Portfolio</h2>
+						</header>
+						<p>My <u>Development</u> & <u>Data</u> showcase.</br> </p>
+						<footer>
+							<ul class="buttons stacked">
+								<li><a href="#" class="button fit scrolly" id="spawnBall" onclick="numberOfBalls()">Spawn balls</a></li>						
+							</ul>
+						</footer>
+				
+					</div>
+
+				</section>
+
+			<!-- Main -->
+				<article id="main">
+
+					<header class="special container">
+						<h2>My quick <strong>intro here</strong></h2>
+						<p>Im Marty, an IT graduate with one year experience,
+						<br/>
+						having studied for 3 years and completing an internship,
+						<br/>
+						i find the engagement, results and interest to be a key part's within this feild for me.
+						</p>
+					</header>
+
+					<!-- Sec 1 -->
+						<section class="wrapper style2 container special-alt">
+
+							<div class="datavizbanner">
+							
+									<header><h2>Interactive <strong>data visualisation</strong></h2>
+										<p>Climate by temp/rain in NZ</p>
+									</header>
+
+										<iframe src="dataviz/index.html" width="100%" height="60%"></iframe>
+										
+									
+									<p style="padding-top: 5%; text-align: center;">A fluctuation in temperature & rainfall occurring a warmer temperature reduced rainfall amount, 
+										locations that received higher or lower amounts 
+										and possible impacts effecting global crop fields therefore food prices, power consumption and water supply.</p>
+									
+										<footer>
+											<ul class="buttons" style="padding-top: 3%; text-align: center;">
+												<li><a href="#" class="button">Find Out More</a></li>
+											</ul>
+										</footer>
+
+							</div>
+						</section>
+
+					</div>
+
+					<!-- Sec 2 -->
+						<section class="wrapper style1 container special" id="projects">
+
+							<header class="special container">
+								<h2>My <strong>projects</strong></h2>
+								<p>A range of work assesments to freetime task's
+								</p>
+							</header>
+
+							<div class="row">
+								<div class="col-4 col-12-narrower">
+
+									<section>
+																												
+										<a><img src="images/dbs.png" alt="dbs" style="width: 100%; cursor: pointer;"></a>
+																																					
+										<header>
+											<h3>data modeling & SQL</h3>
+										</header>
+										<p>XTREME Quality Cars Inc is an LMVD selling vehicles. 
+											They order vehicles from their main centre which resides in auckland then are shipped out to the outlet; 
+											vehicles are priced and placed on the lot for sale; 
+											and customers can purchase vehicles.</p>
+									</section>
+
+								</div>
+								<div class="col-4 col-12-narrower">
+
+									<section>
+									
+										<!--<a><img id="img" src="images/emission.PNG" alt="emission" style="width: 100%; cursor: pointer;"></a>-->
+
+										<div class="containerpic">
+											<img src="images/emission.PNG" alt="Avatar" class="pic" style="cursor: pointer;">
+											
+											<div class="overlaypic">
+											  <div class="grid-container">
+											<div class="grid-item"><a class="mag-popup" href="images/emission.PNG"><img src="images/emission.PNG" alt="Avatar" class="pic"></a></div>
+											<div class="grid-item"><a class="mag-popup" href="images/greenshot.PNG"><img src="images/greenshot.PNG" alt="Avatar" class="pic"></a></div>
+											<div class="grid-item"><a class="mag-popup" href="images/greenshottwo.PNG"><img src="images/greenshottwo.PNG" alt="Avatar" class="pic"></a></div>
+											<div class="grid-item"><a class="mag-popup" href="images/greenshotthree.PNG"><img src="images/greenshotthree.PNG" alt="Avatar" class="pic"></a></div>
+											  </div>
+											  </div>
+											  
+										  </div>
+
+										<header>
+											<h3>excel data visualisation</h3>
+										</header>
+										<p>Greenhouse gas emissions statistics include the emission gas types by industries 2007-2019.</p>
+									</section>
+
+								</div>
+								<div class="col-4 col-12-narrower">
+
+									<section>
+										<!--<a class="mag-popup" href="images/jobseek.PNG">-->
+										<a><img id="pic" src="images/jobseek.PNG" alt="js" style="width: 100%; cursor: pointer;"></a>
+										<header>
+											<h3>Job Lister</h3>
+										</header>
+										<p>Coming soon!?!</p>
+									</section>
+
+								</div>
+							</div>
+						</section>
+
+					<!-- Sec 3 -->
+						<section class="wrapper style3 container special" id="clients">
+
+							<header class="major">
+								<h2>websites <strong>for clients</strong></h2>
+							</header>
+
+							<div class="row">
+								<div class="col-6 col-12-narrower">
+
+									<section>
+										<a href="https://vetcarevets.co.nz" class="image featured" target="_blank">
+											<img src="images/vetcare.png" alt="vetcarevets"/>
+										</a>
+										<header>
+											<h3><a class="weblink" href="https://vetcarevets.co.nz" target="_blank">vetcarevets.co.nz</a></h3>
+										</header>
+										<p>Offering general medical and animal surgery services as well as behaviour advice, senior pet checks, nail and dental checks and more. 
+											Assigned with a project manager & a given time assessment i build the site within wordpress including seo & dns setup.</p>
+									</section>
+
+								</div>
+								<div class="col-6 col-12-narrower">
+
+									<section>
+										<a href="https://www.mostwantedcheese.co.nz" class="image featured" target="_blank">
+											<img src="images/mostwantedcheese.png" alt="mostwantedcheese"/>
+										</a>
+										<header>
+											<h3><a class="weblink" href="https://www.mostwantedcheese.co.nz" target="_blank">mostwantedcheese.co.nz</a></h3>
+										</header>
+										<p>Providing a lip smacking line up of cheese toasties from around the world as well as a selection of cheese inspired savoury and sweet treats, 
+											from catering to food franshiseing. Assigned with a project manager & a given time assessment i build the site within squarespace including seo & dns setup.</p>
+									</section>
+
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-6 col-12-narrower">
+
+									<section>
+										<a href="https://fishdigital.co.nz" class="image featured" target="_blank">
+											<img src="images/fishdigital.png" alt="fishdigital"/>
+										</a>
+										<header>
+											<h3><a class="weblink" href="https://fishdigital.co.nz" target="_blank">fishdigital.co.nz</a></h3>
+										</header>
+										<p>Delivering digital marketing and digital commerce, businesses will learn how to for business by actioning a simple digital marketing blueprint.
+											Brand identity, website, social media, partners and activating and growing a loyal following. 
+											Build within wordpress including seo & dns setup.</p>
+									</section>
+
+								</div>
+								<div class="col-6 col-12-narrower">
+
+									<section>
+										<a href="https://hopefish.org.nz" class="image featured" target="_blank">
+											<img src="images/hopefish.png" alt="hopefish"/>
+										</a>
+										<header>
+											<h3><a class="weblink" href="https://hopefish.org.nz" target="_blank">hopefish.org.nz</a></h3>
+										</header>
+										<p>Developing a solidarity structure that delivers real support, real opportunity and real inclusion to socially disadvantaged women and their children. 
+											A charity co-creating a purposeful vision & walking alongside the activation effort. 
+											Build within wordpress included seo & dns setup.</p>
+									</section>
+
+								</div>
+							</div>
+
+							<footer class="major">
+								<ul class="buttons">
+									<li><a href="#" class="button">See More</a></li>
+								</ul>
+							</footer>
+
+						</section>
+
+				</article>
+
+			<!-- CTA -->
+				<section id="cta">
+
+					<header>
+						<h2>Get in <strong> contact with me</strong></h2>
+						<p>Information on projects, courses and jobs are very welcome.</p>
+					</header>
+					<footer>
+						<ul class="buttons">
+							<li>
+								<a id="myBtn" class="button primary">Notify</a>
+							</li>
+						</ul>
+					</footer>
+
+					<!-- The Modal -->
+				<div id="myModal" class="modal">
+
+					<!-- Modal content -->
+					<div class="modal-content">
+					<span class="close">&times;</span>
+					<div class="form-popup" id="myForm">
+
+					<form action="form_page.php" class="form-container" id="contactForm" method="POST">
+					<h1 style="color: #7c8081; display: block; text-align: left;"><strong>Form</strong></h1>
+
+					<div class="response"></div>
+				
+					<label for="name" style="color: #7c8081; display: block;"><b>Name</b></label>
+					<input class="inputborder" type="text" placeholder="Enter Name" name="name">
+					
+					<label for="email" style="color: #7c8081; display: block;"><b>Email</b></label>
+					<input class="inputborder" type="email" placeholder="Enter Email" name="email">
+
+					<label for="subject" style="color: #7c8081; display: block;"><b>Subject</b></label>
+					<input class="inputborder" type="text" placeholder="Enter Subject" name="subject">
+				
+					<label for="message" style="color: #7c8081; display: block;"><b>Message</b></label><br>
+					<textarea class="inputborder" id="textarea" rows="4" cols="75" style="display: block; margin-inline: auto;" name="message"></textarea>
+				
+					<button type="submit" name="submit" class="btn">Submit</button>
+					</form>
+
+					</div>
+				</div>
+
+				</div>
+
+				</section>
+
+			<!-- Footer -->
+				<footer id="footer">
+
+					<ul class="icons">
+						<li><a href="https://www.linkedin.com/in/martin-boer-b16b6013b" class="fa fa-linkedin" target="_blank"><span class="label">Linkedin</span></a></li>
+						<li><a href="https://github.com/marboe29" class="fa fa-github" target="_blank"><span class="label">Github</span></a></li>
+					</ul>
+
+					<ul class="copyright">
+						<li>&copy;Copyright</li>
+						<li>Martin j Boer</li>
+					</ul>
+
+				</footer>
+
+
+		</div>
+
+	</body>
+	
+		<!-- Scripts -->
+		<script type="text/javascript">
+			
+			
+			//jquery lib
+			$(document).ready(function() {
+			  $('.mag-popup').magnificPopup({type:'image'});
+			});
+
+			$(document).ready(function(){
+				$('#contactForm').submit(function(event){
+
+					//preventDefault method cancels the default action of the event.
+					event.preventDefault();
+
+					$form = $(this);
+
+					$.ajax({
+						type: "POST",
+						url: 'form_page.php', //serialize method, creates a text string with name attributes.
+						data: 'submit=1&'+$form.serialize(),
+						datatype: 'json',
+						success: function(response){
+							if(status == 1){
+								$('.response').html('<div class="fa fa-check" style="color:#3fb1a3">'+response+'</div>');
+								//$('#contactForm')[0].reset(); jquery doesnt have a reset method converts it to javascript object
+								$('#contactForm').trigger("reset");
+
+							}else{
+								$('.response').html('<div class="fa fa-warning" style="color:red">'+response+'</div>');
+								//$('.inputborder').attr("style", "border: 1px solid red;").trigger("reset");
+							}
+						}
+
+					});
+
+				});
+
+			});
+			
+
+		//Get the modal
+		var modal = $('#myModal');
+
+		//Get the button that opens the modal
+		var btn = $('#myBtn');
+
+		//Get the <span> element that closes the modal
+		var span = $('.close');
+
+		
+		$(document).ready(function(){
+			//When the user clicks the button, open the modal 
+			btn.on('click', function(){
+				modal.show();
+			});
+			//When the user clicks on <span> (x), close the modal
+			span.on('click', function(){
+				modal.hide();
+			});
+
+		});
+		//When the user clicks anywhere outside of the modal, close it
+		$('body').bind('click', function(event){
+			if ($(event.target).hasClass("modal")){
+					modal.hide();
+			}
+		});
+
+
+		/*
+		//Get the modal
+		var modal = document.getElementById("myModal");
+
+		//Get the button that opens the modal
+		var btn = document.getElementById("myBtn");
+
+		//Get the <span> element that closes the modal
+		var span = document.getElementsByClassName("close")[0];
+
+		//When the user clicks the button, open the modal 
+		btn.onclick = function() {
+			modal.style.display = "block";
+		}
+		
+		//When the user clicks on <span> (x), close the modal
+		span.onclick = function() {
+		modal.style.display = "none";
+		}
+		
+		//When the user clicks anywhere outside of the modal, close it
+		window.onclick = function(event) {
+		if (event.target == modal) {
+			modal.style.display = "none";
+		}
+		}
+		*/
+
+
+
+
+
+
+// Ball object - multiple balls can be created by instantiating new objects
+function Ball(svg, x, y, id, color, aoa, weight) {
+    this.posX = x; // cx
+    this.posY = y; // cy
+    this.color = color;
+    this.radius = weight; // radius and weight same
+    this.jumpSize = 1; // equivalent of speed default to 1
+    this.svg = svg; // parent SVG
+    this.id = id; // id of ball
+    this.aoa = aoa; // angle of attack
+    this.weight = weight;
+
+    if (!this.aoa)
+        this.aoa = Math.PI / 7;
+    if (!this.weight)
+        this.weight = 10;
+    this.radius = this.weight;
+
+    this.data = [this.id]; // allow us to use d3.enter()
+
+    var thisobj = this; // i like to use thisobj instead of this. this many times not reliable particularly handling evnet
+
+    // **** aoa is used only here -- earlier I was using to next move position.
+    // Now aoa and speed together is velocity 
+    this.vx = Math.cos(thisobj.aoa) * thisobj.jumpSize; // velocity x
+    this.vy = Math.sin(thisobj.aoa) * thisobj.jumpSize; // velocity y
+    this.initialVx = this.vx;
+    this.initialVy = this.vy;
+    this.initialPosX = this.posX;
+    this.initialPosY = this.posY;
+
+    // when speed changes, go to initial setting
+    this.GoToInitialSettings = function (newjumpSize) {
+        thisobj.posX = thisobj.initialPosX;
+        thisobj.posY = thisobj.initialPosY;
+        thisobj.vx = Math.cos(thisobj.aoa) * newjumpSize; // velocity x
+        thisobj.vy = Math.sin(thisobj.aoa) * newjumpSize; // velocity y
+        thisobj.Draw();
+    }
+
+    this.Draw = function () {
+        var svg = thisobj.svg;
+        var ball = svg.selectAll('#' + thisobj.id)
+                    .data(thisobj.data)
+                ;
+        ball.enter()
+            .append("circle")
+            .attr({"id" : thisobj.id, 'class' : 'ball', 'r' : thisobj.radius, 'weight' : thisobj.weight})
+            .style("fill", thisobj.color)
+            ;
+        ball
+            //.transition()//.duration(50)
+            .attr("cx", thisobj.posX)
+            .attr("cy", thisobj.posY)
+        ;
+        // intersect ball is used to show collision effect - every ball has it's own intersect ball
+        var intersectBall = ball.enter()
+                            .append('circle')
+                            .attr({ 'id': thisobj.id + '_intersect', 'class': 'intersectBall' });
+    }
+
+    this.Move = function () {
+        var svg = thisobj.svg;
+
+        //thisobj.posX += Math.cos(thisobj.aoa) * thisobj.jumpSize;
+        //thisobj.posY += Math.sin(thisobj.aoa) * thisobj.jumpSize;
+
+        thisobj.posX += thisobj.vx;
+        thisobj.posY += thisobj.vy;
+
+        if (parseInt(svg.attr('width')) <= (thisobj.posX + thisobj.radius)) {
+            thisobj.posX = parseInt(svg.attr('width')) - thisobj.radius - 1;
+            thisobj.aoa = Math.PI - thisobj.aoa;
+            thisobj.vx = -thisobj.vx;
+        }
+
+        if ( thisobj.posX < thisobj.radius) {
+            thisobj.posX = thisobj.radius+1;
+            thisobj.aoa = Math.PI - thisobj.aoa;
+            thisobj.vx = -thisobj.vx;
+        }
+
+        if (parseInt(svg.attr('height')) < (thisobj.posY + thisobj.radius)) {
+            thisobj.posY = parseInt(svg.attr('height')) - thisobj.radius - 1;
+            thisobj.aoa = 2 * Math.PI - thisobj.aoa;
+            thisobj.vy = -thisobj.vy;
+        }
+
+        if (thisobj.posY < thisobj.radius) {
+            thisobj.posY = thisobj.radius+1;
+            thisobj.aoa = 2 * Math.PI - thisobj.aoa;
+            thisobj.vy = -thisobj.vy;
+        }
+
+        // **** NOT USING AOA except during initilization. Just left this for future reference ***** 
+        if (thisobj.aoa > 2 * Math.PI)
+            thisobj.aoa = thisobj.aoa - 2 * Math.PI;
+        if (thisobj.aoa < 0)
+            thisobj.aoa = 2 * Math.PI + thisobj.aoa;
+
+        thisobj.Draw();
+    }
+}
+
+function CheckCollision(ball1, ball2) {
+    var absx = Math.abs(parseFloat(ball2.posX) - parseFloat(ball1.posX));
+    var absy = Math.abs(parseFloat(ball2.posY) - parseFloat(ball1.posY));
+
+    // find distance between two balls.
+    var distance = (absx * absx) + (absy * absy);
+    distance = Math.sqrt(distance);
+    // check if distance is less than sum of two radius - if yes, collision
+    if (distance < (parseFloat(ball1.radius) + parseFloat(ball2.radius))) {
+        return true;
+    }
+    return false;
+}
+
+var balls = []; // global array representing balls
+var color = d3.scale.category20();
+
+//courtsey thanks to several internet sites for formulas
+//detect collision, find intersecting point and set new speed+direction for each ball based on weight (weight=radius)
+function ProcessCollision(ball1, ball2) {
+
+    if (ball2 <= ball1)
+        return;
+    if (ball1 >= (balls.length-1) || ball2 >= balls.length )
+        return;
+
+    ball1 = balls[ball1];
+    ball2 = balls[ball2];
+
+    if ( CheckCollision(ball1, ball2) ) {
+        // intersection point
+        var interx = ((ball1.posX * ball2.radius) + ball2.posX * ball1.radius)
+        / (ball1.radius + ball2.radius);
+        var intery = ((ball1.posY * ball2.radius) + ball2.posY  * ball1.radius)
+        / (ball1.radius + ball2.radius);
+
+        // show collision effect for 500 miliseconds
+        var intersectBall = svg.select('#' + ball1.id + '_intersect');
+        intersectBall.attr({ 'cx': interx, 'cy': intery, 'r': 5 ,'fill': 'black' })
+                    .transition()
+                    .duration(500)
+                    .attr('r', 0);
+
+        // calculate new velocity of each ball.
+        var vx1 = (ball1.vx * (ball1.weight - ball2.weight)
+            + (2 * ball2.weight * ball2.vx )) / (ball1.weight + ball2.weight);
+        var vy1 = (ball1.vy * (ball1.weight - ball2.weight)
+            + (2 * ball2.weight * ball2.vy)) / (ball1.weight + ball2.weight);
+        var vx2 = (ball2.vx * (ball2.weight - ball1.weight)
+            + (2 * ball1.weight * ball1.vx)) / (ball1.weight + ball2.weight);
+        var vy2 = (ball2.vy * (ball2.weight - ball1.weight)
+            + (2 * ball1.weight * ball1.vy)) / (ball1.weight + ball2.weight);
+
+        //set velocities for both balls
+        ball1.vx = vx1;
+        ball1.vy = vy1;
+        ball2.vx = vx2;
+        ball2.vy = vy2;
+
+        //ensure one ball is not inside others. distant apart till not colliding
+        while (CheckCollision(ball1, ball2)) {
+            ball1.posX += ball1.vx;
+            ball1.posY += ball1.vy;
+
+            ball2.posX += ball2.vx;
+            ball2.posY += ball2.vy;
+        }
+        ball1.Draw();
+        ball2.Draw();
+    }
+}
+
+function Initialize(containerId) {
+    var height = document.getElementById(containerId).clientHeight;
+    var width = document.getElementById(containerId).clientWidth;
+    gContainerId = containerId;
+    gCanvasId = containerId + '_canvas';
+    gTopGroupId = containerId + '_topGroup';
+    var svg = d3.select("#" + containerId).append("svg")
+        .attr("id", gCanvasId)
+        .attr("width", width)
+        .attr("height", height)
+        .append("g")
+        .attr("id", gTopGroupId)
+        .attr("x", 0)
+        .attr("y", 0)
+        .attr("width", width)
+        .attr("height", height)
+        .style("fill", "none")
+    //.attr("transform", "translate(" + 1 + "," + 1 + ")")
+    ;
+
+    balls.push(new Ball(svg, 501, 101, 'n1', '#83d3c9', Math.PI / 7, 35));
+    balls.push(new Ball(svg, 401, 41, 'n2', 'white', Math.PI + Math.PI / 7, 35));
+	
+
+	for (var i = 0; i < balls.length; ++i) {
+        balls[i].Draw();
+    }
+
+    return svg;
+}
+
+
+	var startStop = null;
+
+	window.onload=function() {
+        document.getElementById("n1").addEventListener("click", begin);
+		document.getElementById("n2").addEventListener("click", begin);
+    }
+
+    function begin(){
+       	
+        if (startStop == null) {
+            d3.timer(function () {
+                for (var i = 0; i < balls.length; ++i) {
+                    var r = balls[i].Move();
+                    for (var j = i + 1; j < balls.length; ++j) {
+                        ProcessCollision(i, j);
+                    }
+                }
+                if (startStop == null)
+                    return true;
+                else
+                    return false;
+            }, 100);
+
+            startStop = 1;
+        }
+        else {
+            startStop = null; 
+        }
+    }
+
+		/*
+	 	var imgCount = 0;
+		var images = ["images/emission.PNG", "images/greenshot.PNG", "images/greenshottwo.PNG", "images/greenshotthree.PNG"];
+
+		function changeImage() {
+			
+			if (imgCount !== images.length - 1)
+				imgCount++;
+			
+			else 
+				imgCount = 0;
+			var image = document.getElementById('img');
+			image.src = images[imgCount];
+			
+			}
+		*/
+	
+	/* https://codepen.io/StrengthandFreedom/pen/QNgwvg */
+	
+	$(document).ready(function(){
+  			$("#spawnBall").toggle(
+    			function(){$("#spawnBall");
+
+				document.getElementById('spawnBall').innerHTML = "delete balls";
+        		b = 8;
+				balls = balls.slice(2);
+        
+        			for (var i = 0; i < b; ++i) {
+            			balls.push(new Ball(svg, 101, 101, 'n'+(i+1).toString(), color(i),  Math.PI / (i+1), (i+35)));
+						//console.log(balls.slice(2));
+        			}
+					
+			},
+				function(){$("svg").remove();
+				document.getElementById('spawnBall').style.display = "none";}
+			);
+		});
+	
+		var svg = Initialize('banner');
+		begin();
+				
+		</script>
+
+</html>
