@@ -8,6 +8,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
 
 		<link rel="stylesheet" href="css/main.css"/>
+		<link rel="stylesheet" href="css/ePopupbox.css"/>
+		<link rel="stylesheet" href="css/indexPage.css"/>
 		<link rel="stylesheet" href="css/fontawesome-all.min.css" />
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		
@@ -26,66 +28,13 @@
 		<!-- Magnific Popup core JS file -->
 		<script src="magnific/jquery.magnific-popup.js"></script>
 
+		<script src="scripts/ePopupText.js"></script>
+
 		<!--D3 javascript libary-->
 		<script src="https://d3js.org/d3.v3.min.js"></script>
 		<link rel="stylesheet" href="scripts/ball.js">
 
 		<style>
-
-			#banner_canvas{
-				position: absolute;
-    			left: 0;
-    			top: 0;
-			}
-
-			.containerpic {
-			position: relative;
-			width: 100%;
-			}
-
-			.pic {
-			display: block;
-			width: 100%;
-			height: auto;
-			}
-
-			.overlaypic {
-			position: absolute;
-			display: flex;
-			bottom: 0;
-			left: 0;
-			right: 0;
-			background-color: #f3f6fa;
-			overflow: hidden;
-			width: 100%;
-			height: 100%;
-			-webkit-transform: scale(0);
-			-ms-transform: scale(0);
-			transform: scale(0);
-			-webkit-transition: .5s ease;
-			transition: .5s ease;
-			cursor: pointer;
-			border-radius: 2px
-			}
-
-			.containerpic:hover .overlaypic {
-			-webkit-transform: scale(1);
-			-ms-transform: scale(1);
-			transform: scale(1);
-			}
-
-			.grid-container {
-			display: grid;
-			grid-template-columns: auto auto;
-			}
-			.grid-item {
-			background-color: rgba(255, 255, 255, 0.8);
-			border: 1px solid rgba(0, 0, 0, 0.8);
-			padding: 20px;
-			font-size: 30px;
-			text-align: center;
-			}
-
 		</style>
 
 	</head>
@@ -113,7 +62,7 @@
 						<header>
 							<h2>Portfolio</h2>
 						</header>
-						<p>My <u>Development</u> & <u>Data</u> showcase.</br> </p>
+						<p>My Development & Data showcase.</br> </p>
 						<footer>
 							<ul class="buttons stacked">
 								<li><a href="#" class="button fit scrolly" id="spawnBall" onclick="numberOfBalls()">Spawn balls</a></li>						
@@ -129,11 +78,11 @@
 
 					<header class="special container">
 						<h2>My quick <strong>intro here</strong></h2>
-						<p>Im Marty, an IT graduate with one year experience,
-						<br/>
-						having studied for 3 years and completing an internship,
+						<p>Im Marty, an IT grad with one year experience,
 						<br/>
 						i find the engagement, results and interest to be a key part's within this feild for me.
+						<br/>
+						Here you will find projects and actual work for clients from my past intenship.
 						</p>
 					</header>
 
@@ -142,7 +91,7 @@
 
 							<div class="datavizbanner">
 							
-									<header><h2>Interactive <strong>data visualisation</strong></h2>
+									<header><h2>Interactive <strong>data visual</strong></h2>
 										<p>Climate by temp/rain in NZ</p>
 									</header>
 
@@ -150,14 +99,15 @@
 										
 									
 									<p style="padding-top: 5%; text-align: center;">A fluctuation in temperature & rainfall occurring a warmer temperature reduced rainfall amount, 
-										locations that received higher or lower amounts 
-										and possible impacts effecting global crop fields therefore food prices, power consumption and water supply.</p>
+										possible impacts effecting global crop fields therefore food prices, power consumption and water supply. Created using D3.js, a javascript library.</p>
 									
+										<!--
 										<footer>
 											<ul class="buttons" style="padding-top: 3%; text-align: center;">
 												<li><a href="#" class="button">Find Out More</a></li>
 											</ul>
 										</footer>
+										-->
 
 							</div>
 						</section>
@@ -178,7 +128,19 @@
 
 									<section>
 																												
-										<a><img src="images/dbs.png" alt="dbs" style="width: 100%; cursor: pointer;"></a>
+										<div class="containerpic">
+											<img src="images/dbs.PNG" alt="Avatar" class="pic" style="cursor: pointer;">
+											
+											<div class="overlaypic">
+											  <div class="grid-container">
+											<div class="grid-item"><a class="mag-popup" href="images/dbs.PNG"><img src="images/dbs.PNG" alt="Avatar" class="pic"></a></div>
+											<div class="grid-item"><a class="mag-popup" href="images/dataddl.PNG"><img src="images/dataddl.PNG" alt="Avatar" class="pic"></a></div>
+											<div class="grid-item"><a class="mag-popup" href="images/datadml.PNG"><img src="images/datadml.PNG" alt="Avatar" class="pic"></a></div>
+											<div class="grid-item"><a class="mag-popup" href="images/dataquery.PNG"><img src="images/dataquery.PNG" alt="Avatar" class="pic"></a></div>
+											  </div>
+											  </div>
+											  
+										  </div>
 																																					
 										<header>
 											<h3>data modeling & SQL</h3>
@@ -197,14 +159,14 @@
 										<!--<a><img id="img" src="images/emission.PNG" alt="emission" style="width: 100%; cursor: pointer;"></a>-->
 
 										<div class="containerpic">
-											<img src="images/emission.PNG" alt="Avatar" class="pic" style="cursor: pointer;">
+											<img src="images/DashboardIndustryEmission.PNG" alt="Avatar" class="pic" style="cursor: pointer;">
 											
 											<div class="overlaypic">
 											  <div class="grid-container">
-											<div class="grid-item"><a class="mag-popup" href="images/emission.PNG"><img src="images/emission.PNG" alt="Avatar" class="pic"></a></div>
-											<div class="grid-item"><a class="mag-popup" href="images/greenshot.PNG"><img src="images/greenshot.PNG" alt="Avatar" class="pic"></a></div>
-											<div class="grid-item"><a class="mag-popup" href="images/greenshottwo.PNG"><img src="images/greenshottwo.PNG" alt="Avatar" class="pic"></a></div>
-											<div class="grid-item"><a class="mag-popup" href="images/greenshotthree.PNG"><img src="images/greenshotthree.PNG" alt="Avatar" class="pic"></a></div>
+											<div class="grid-item"><a class="mag-popup" href="images/DashboardIndustryEmission.PNG"><img src="images/DashboardIndustryEmission.PNG" alt="Avatar" class="pic"></a></div>
+											<div class="grid-item"><a class="mag-popup" href="images/DashboardIndustryEmission2.PNG"><img src="images/DashboardIndustryEmission2.PNG" alt="Avatar" class="pic"></a></div>
+											<div class="grid-item"><a class="mag-popup" href="images/greenHouseData.PNG"><img src="images/greenHouseData.PNG" alt="Avatar" class="pic"></a></div>
+											<div class="grid-item"><a class="mag-popup" href="images/Suggestion6.PNG"><img src="images/Suggestion6.PNG" alt="Avatar" class="pic"></a></div>
 											  </div>
 											  </div>
 											  
@@ -213,19 +175,164 @@
 										<header>
 											<h3>excel data visualisation</h3>
 										</header>
-										<p>Greenhouse gas emissions statistics include the emission gas types by industries 2007-2019.</p>
+										<p>Greenhouse gas emissions statistics includes the emission types by industries 2007-2019.</p>
+
+										<!-- popup button -->
+										<a id="emissionBtn" style='cursor:pointer;'>Read more.</a>
+																				
+										<!-- the content -->
+										<div id="emissionPopup" class="ePopup">
+										<div class="ePopupContent">
+										<span class="close"></span>
+
+											<h5 class="eSubtitle">Report</h5>
+
+											<div id="eOneSection" onclick="eTextDropdown()">
+											<a id="eArrowOne" class="fa fa-arrow-right"></a>
+											<h3 class="eTitle"><strong>Instructions on how to run and view your visualisation</strong></h3>
+											</div>
+											
+											<div id="ePopupText" class="eTextContent">
+												
+												
+											<p>File installed: Navigate to the Dashboard tab located on the excel file at the bottom, select both the dropdowns and option buttons to change between views that will change charts & fields automatically based on selected.</p>
+
+											<p>Section 1 – Charts: <strong>Top 5 industry’s & Emission types by industry</strong></p>
+											<p>-	Top 5 industries selectable fields are 7 types of emissions: Carbon dioxide, Fluorinated gases, Hydrofluorocarbons, Methane, Nitrous oxide, Perfluorocarbons, Sulphur hexafluoride. Number fields located under chart showing total & change amount for all listed industries on current chart.
+											Industries are ranked by highest amount for the selected emission type. Including showing the past data these industries have seen from 07 to 19.</p>
+
+											<p>-	Emission types by industry showing the top-ranking Industries from the previous chart but an in-depth look into its emission types by industry as an overall % across them that’s contributing to the amount.
+											Selectable buttons are groups 1-3 which include the top 12 industries in total.</p>
+
+											<p>Section 2 – Charts: <strong>Total emissions by industry & by year</strong></p>
+											<p>-	Total by industry revealing the emission types and amount over the period 07-19 as sum, listing 20+ industries it shows the true scale of the emission types showing the amount rather than overall % within the industry.</p>
+
+											<p>-	Total by year includes all industries by emission type for each given year out of the time frame, showing the range, trend and increments amounts for each type. 
+											Number fields relating to this chart are displayed bottom left that will select all 7 emission types, on change effect will come from the dropdown chart top 5, calculating total for each emission type, average for that type and the overall % out of the 7 emission types as rank.
+											</p>
+										
+											</div>
+											
+											
+											<div id="eTwoSection" onclick="eTextDropdownTwo()">
+											<a id="eArrowTwo" class="fa fa-arrow-right"></a>
+											<h3 class="eTitle"><strong>How to address the data visualization</strong></h3>
+											</div>
+											
+											<div id="ePopupTextTwo" class="eTextContentTwo">
+											<p><strong>1.	Questions that warrant the use of visualization methods</strong></p>
+										<p>how much emissions come from each industry.
+										what is the overall amount and averages for each emission.
+										how many emission types are within each industry.
+										what industries have increased.
+										how the industry emissions have scaled over time.
+										what emission is ranked highest among the industries.
+										what emissions have increased.</p>
+										<p><strong>2.	Description of the source and type of dataset used</strong></p>
+										<p>Stats NZ official data agency is a government department. From the Ministry for the Environment and show production-based gross collects information from people and organisations through censuses and surveys. 
+										</p>
+										<p style="text-decoration-line: underline;">Greenhouse gas emissions (industry and household): Year ended 2019.
+										(Government, 2021)
+										CSV format</p>
+
+										<p><strong>3.	Visualization techniques evaluated, selected and used</strong></p>
+
+										<p><strong>Clustered bar chart:</strong> A horizontal view both for width of chart and text lineament, a dropdown to reduce to a single chart but its fields to change for multiple charts saving space, stacked bars showing any increments over time for each type.
+										<br><strong>Pie chart:</strong> Grouped charts displaying more info but within a good chart size as a whole, a selector to change between multiple groups of charts saving space, A circular view showing a proportional to the fraction of the whole in each type.
+										<br><strong>Area chart:</strong> A single chart scaling across the total for each category by type, volume-based view including each type by colour code for a single category while scaling to the most on one end.
+										<br><strong>Stacked line chart:</strong> A single chart scaling across the total for each year by type, to include all types in a stacked view listing topmost ranked type for comparison as well as any increments over time.</p> 
+
+										<p>Number fields as extra values for input based from the charts that’s not visible unless calculated from the chart, to display different values for each type once selected from the dropdown.</p>
+
+										<p><strong>4.	Values the visualization provides for a given context</strong></p>
+
+										<p>Air pollutants responsible for environmental effects such as climate, air pollutions, extreme weather, crop fields and increased wildfires. Other effects such as respiratory diseases, food supply disruptions and reduced atmospheric visibility.</p>
+
+										<p>Industries at the most risk of polluting emissions
+										Industries producing the most emissions
+										Industries that saw an increase in their emissions
+										Which emission each industry producers most of
+										Which emissions each industry have
+										What is the most polluting emission among others
+										What direction the industry emissions may be heading
+										</p>
+											</div>
+										
+										
+										<div id="eThreeSection" onclick="eTextDropdownThree()">
+											<a id="eArrowThree" class="fa fa-arrow-right"></a>
+											<h3 class="eTitle"><strong>Conclusion</strong></h3>
+											</div>
+											
+											<div id="ePopupTextThree" class="eTextContentThree">
+											<p id="eTitleSpace"><strong>CO2 Emission: Carbon dioxide 1.9% increase – Overall 45.6% of total emissions.</strong></p>
+										Households saw a 13.662% increase of a difference 2,274.5, 94% of the industry is carbon dioxide and 22.59% of Carbon dioxide’s total.
+										<br>Goods-producing industries saw a -3.3692% decrease of a difference -602.09, 78% of the industry is carbon dioxide and 22.21% of Carbon dioxide’s total.
+										<br>Manufacturing saw a 15.884% increase of a difference 1,526.75, 91% of the industry is carbon dioxide and 13.41% of Carbon dioxide’s total.
+										<br>Service industries saw a 2.8404% increase of a difference 230.56, 86% of the industry is carbon dioxide and 10.23% of Carbon dioxide’s total.
+										<br>Electricity and gas supply saw a -36.474% decrease of a difference -2,747.14, 94% of the industry is carbon dioxide and 7.56% of Carbon dioxide’s total.
+										<p id="eTitleSpace"><strong>CO2 Emission: Fluorinated gases 83% increase – Overall 1.7% of total emissions.</strong></p>
+										Goods-producing industries saw a 112.03% increase of a difference 504.18, 3% of the industry is fluorinated gases and 25.37% of Fluorinated gases total.
+										<br>Service industries saw a 81.265% increase of a difference 319.42, 6% of the industry is fluorinated gases and 20.16% of Fluorinated gases total.
+										<br>Manufacturing saw a 15.93% increase of a difference 56.44, 3% of the industry is fluorinated gases and 13.97% of Fluorinated gases total.
+										<br>Water, sewerage, drainage, and waste services saw a 515.21% increase of a difference 443.8, 9% of the industry is fluorinated gases and 11.01% of Fluorinated gases total.
+										<br>Households saw a 25.843% increase of a difference 64.86, 1% of the industry is fluorinated gases and 10.71% of Fluorinated gases total.
+										<p id="eTitleSpace"><strong>CO2 Emission: Hydrofluorocarbons 90% increase – Overall 1.6% of total emissions.</strong></p>
+										Goods-producing industries saw a 120.8% increase of a difference 466.19, 3% of the industry is hydrofluorocarbons and 24.08% of Hydrofluorocarbons total.
+										<br>Service industries saw a 82.504% increase of a difference 320.85, 6% of the industry is hydrofluorocarbons and 21.20% of Hydrofluorocarbons total.
+										<br>Manufacturing saw a 4.667% increase of a difference 14.26, 3% of the industry is hydrofluorocarbons and 12.52% of Hydrofluorocarbons total.
+										<br>Water, sewerage, drainage, and waste services saw a 577.17% increase of a difference 447.65, 9% of the industry is hydrofluorocarbons and 11.39% of Hydrofluorocarbons total.
+										<br>Households saw a 25.843% increase of a difference 64.86, 1% of the industry is hydrofluorocarbons and 11.32% of Hydrofluorocarbons total.
+										<p id="eTitleSpace"><strong>CO2 Emission: Methane -3.5% decrease – Overall 41.6% of total emissions.</strong></p>
+										Sheep, beef cattle, and grain farming saw a -12.919% decrease of a difference -2,592.31, 80% of the industry is methane and 48.05% of methane’s total.
+										<br>Dairy cattle farming saw a 32.951% increase of a difference 3,140.34, 72% of the industry is methane and 30.03% of methane’s total.
+										<br>Goods-producing industries saw a -18.681% decrease of a difference -644.24, 15% of the industry is methane and 8.07% of methane’s total.
+										<br>Water, sewerage, drainage, and waste services saw a -26.074% decrease of a difference -772.32, 76% of the industry is methane and 6.59% of methane’s total.
+										<br>Poultry, deer, and other livestock farming saw a -32.585% decrease of a difference -360.91, 69% of the industry is methane and 2.17% of methane’s total.
+										<p id="eTitleSpace"><strong>CO2 Emission: Nitrous oxide 11% increase – Overall 9.5% of total emissions.</strong></p>
+										Sheep, beef cattle, and grain farming saw a -2.289% decrease of a difference -84.65, 16% of the industry is nitrous oxide and 42.38% of Nitrous oxide’s total.
+										<br>Dairy cattle farming saw a 35.346% increase of a difference 1,033.4, 22% of the industry is nitrous oxide and 41.69% of Nitrous oxide’s total.
+										<br>Poultry, deer, and other livestock farming saw a -20.306% decrease of a difference -58.94, 20% of the industry is nitrous oxide and 2.77% of Nitrous oxide’s total.
+										<br>Goods-producing industries saw a 18.112% increase of a difference 35.93, 1% of the industry is nitrous oxide and 2.44% of Nitrous oxide’s total.
+										<br>Service industries saw a 24.71% increase of a difference 32.36, 2% of the industry is nitrous oxide and 1.62% of Nitrous oxide’s total.
+										<p id="eTitleSpace"><strong>perfluorocarbons up over 85% and sulphur hexafluoride down -21%. Overall, 0.1% of total emissions.</strong></p>
+											</div><br>
+											
+										</div>
+										</div>
+
+
+
+										  
 									</section>
 
 								</div>
 								<div class="col-4 col-12-narrower">
 
 									<section>
-										<!--<a class="mag-popup" href="images/jobseek.PNG">-->
+
+										<!--<a class="mag-popup" href="images/jobseek.PNG">
 										<a><img id="pic" src="images/jobseek.PNG" alt="js" style="width: 100%; cursor: pointer;"></a>
+										-->
+
+										<div class="containerpic">
+											<img src="images/jobseek.PNG" alt="Avatar" class="pic" style="cursor: pointer;">
+											
+											<div class="overlaypic">
+											  <div class="grid-container">
+											<div class="grid-item"><a class="mag-popup" href="images/jobseek.PNG"><img src="images/jobseek.PNG" alt="Avatar" class="pic"></a></div>
+											<div class="grid-item"><a class="mag-popup" href="images/jobseekcreate.PNG"><img src="images/jobseekcreate.PNG" alt="Avatar" class="pic"></a></div>
+											<div class="grid-item"><a class="mag-popup" href="images/jobseekview.PNG"><img src="images/jobseekview.PNG" alt="Avatar" class="pic"></a></div>
+											  </div>
+											  </div>
+											  
+										  </div>
+
 										<header>
 											<h3>Job Lister</h3>
 										</header>
-										<p>Coming soon!?!</p>
+										<p>A simple function to create, edit, delete and view by category. 
+											This could also be used for a question bank, category could dropdown and select hardware related iusses.</p>
 									</section>
 
 								</div>
@@ -327,7 +434,7 @@
 						</ul>
 					</footer>
 
-					<!-- The Modal -->
+					<!-- Github pages does not support php -->
 				<div id="myModal" class="modal">
 
 					<!-- Modal content -->
@@ -352,10 +459,16 @@
 					<label for="message" style="color: #7c8081; display: block;"><b>Message</b></label><br>
 					<textarea class="inputborder" id="textarea" rows="4" cols="75" style="display: block; margin-inline: auto;" name="message"></textarea>
 				
-					<button type="submit" name="submit" class="btn">Submit</button>
+					<button type="submit" name="submit" class="btn" id="disMes" onclick="displayMessage()">Submit</button>
 					</form>
 
 					</div>
+					<!--added display messge for form not working on github pages-->
+					<div id="addMes" style="display: none;" onclick="displayMessage()">
+						<p style="color:black">Currently not working on <strong>github pages,</strong>
+							<br>you can contact me on <a href="tel:0277260260" style="cursor: pointer;">0277260260</a> or email me at <a href="mailto:martinboer81@gmail.com" style="cursor: pointer;">martinboer81</a></p>
+					</div>
+
 				</div>
 
 				</div>
@@ -423,66 +536,44 @@
 			});
 			
 
-		//Get the modal
+		//Gets the contact form
 		var modal = $('#myModal');
-
-		//Get the button that opens the modal
+		//Get the button that opens the contact form
 		var btn = $('#myBtn');
-
-		//Get the <span> element that closes the modal
+		//Get the <span> element that closes the contact form
 		var span = $('.close');
-
 		
 		$(document).ready(function(){
-			//When the user clicks the button, open the modal 
+			//When the user clicks the button, open the form
 			btn.on('click', function(){
 				modal.show();
 			});
-			//When the user clicks on <span> (x), close the modal
+			//When the user clicks on <span> (x), close the form
 			span.on('click', function(){
 				modal.hide();
 			});
 
 		});
-		//When the user clicks anywhere outside of the modal, close it
+		//When the user clicks anywhere outside of the form, close it
 		$('body').bind('click', function(event){
 			if ($(event.target).hasClass("modal")){
 					modal.hide();
 			}
 		});
 
+		//Gets the emission projects popup text
+		var ePopup = document.getElementById("emissionPopup");
+		var eBtn = document.getElementById("emissionBtn");
 
-		/*
-		//Get the modal
-		var modal = document.getElementById("myModal");
-
-		//Get the button that opens the modal
-		var btn = document.getElementById("myBtn");
-
-		//Get the <span> element that closes the modal
-		var span = document.getElementsByClassName("close")[0];
-
-		//When the user clicks the button, open the modal 
-		btn.onclick = function() {
-			modal.style.display = "block";
+		eBtn.onclick = function() {
+		ePopup.style.display = "block";
 		}
-		
-		//When the user clicks on <span> (x), close the modal
-		span.onclick = function() {
-		modal.style.display = "none";
-		}
-		
-		//When the user clicks anywhere outside of the modal, close it
+
 		window.onclick = function(event) {
-		if (event.target == modal) {
-			modal.style.display = "none";
+		if (event.target == ePopup) {
+			ePopup.style.display = "none";
 		}
 		}
-		*/
-
-
-
-
 
 
 // Ball object - multiple balls can be created by instantiating new objects
@@ -763,6 +854,11 @@ function Initialize(containerId) {
 	
 		var svg = Initialize('banner');
 		begin();
+
+
+		function displayMessage(){
+			document.getElementById('addMes').style.display = "block";
+		}
 				
 		</script>
 
