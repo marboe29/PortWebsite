@@ -100,9 +100,11 @@ input, select, textarea {
 		text-decoration: none;
 	}
 
-		a:hover {
-			border-bottom-color: transparent;
-		}
+	a:hover {
+		border-bottom-color: transparent;
+		color: black;
+		opacity:0.8;
+	}
 
 	strong, b {
 		font-weight: 400;
@@ -371,9 +373,11 @@ input, select, textarea {
 
 		}
 
-		.datavizbanner{
-			height: 1400px;
+		.visualbanner{
+			height: auto;
 		}
+
+
 
 
 /* Row */

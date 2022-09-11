@@ -7,8 +7,8 @@ drawbar();
 function drawLolly() {
   //set the dimensions and margins of the graph
   var margin = { top: 50, right: 30, bottom: 50, left: 50 }
-  let width = 625 - margin.left - margin.right
-  let height = 500 - margin.top - margin.bottom;
+  width = 625 - margin.left - margin.right
+  height = 500 - margin.top - margin.bottom;
 
   
   if (window.innerWidth < 1280) {

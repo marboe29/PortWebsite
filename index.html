@@ -65,7 +65,7 @@
 						<p>My Development & Data showcase.</br> </p>
 						<footer>
 							<ul class="buttons stacked">
-								<li><a href="#" class="button fit scrolly" id="spawnBall" onclick="numberOfBalls()">Spawn balls</a></li>						
+								<li><a href="#" class="button fit scrolly" id="spawnBall">Spawn balls</a></li>						
 							</ul>
 						</footer>
 				
@@ -89,27 +89,31 @@
 					<!-- Sec 1 -->
 						<section class="wrapper style2 container special-alt">
 
-							<div class="datavizbanner">
+							<div class="visualbanner">
 							
-									<header><h2>Interactive <strong>data visual</strong></h2>
-										<p>Climate by temp/rain in NZ</p>
-									</header>
+								<header><h2>Interactive <strong>data visualisation</strong></h2>
+									<p>D3.js chart</p>
+								</header>
 
-										<iframe src="dataviz/index.html" width="100%" height="60%"></iframe>
-										
-									
-									<p style="padding-top: 5%; text-align: center;">A fluctuation in temperature & rainfall occurring a warmer temperature reduced rainfall amount, 
-										possible impacts effecting global crop fields therefore food prices, power consumption and water supply. Created using D3.js, a javascript library.</p>
-									
-										<!--
-										<footer>
-											<ul class="buttons" style="padding-top: 3%; text-align: center;">
-												<li><a href="#" class="button">Find Out More</a></li>
-											</ul>
-										</footer>
-										-->
+									<div>
+										<ul class="dataVizButtons" style="display: flex; list-style: none; cursor: pointer;">
+											<li><a class="chartBtn" id="displayLine" onclick="chartToggle()" style="text-decoration-line: underline;">Monthly temp</a></li>
+											<li><a class="chartBtn" id="displayCicle" onclick="chartToggle()" style="text-decoration-line: underline;">Yearly temp</a></li>
+											<li><a class="chartBtn" id="displayMap" onclick="chartToggle()" style="text-decoration-line: underline;">Monthly rainfull</a></li>
+											<li><a class="chartBtn" id="displayBar" onclick="chartToggle()" style="text-decoration-line: underline;">Yearly rainfull</a></li>					
+										</ul>
+									</div>
 
+										<iframe id="chartLine" src="dataviz/templine.html" width="100%" height="700px"></iframe>
+										<iframe id="chartCicle" style="display: none;" src="dataviz/tempcicle.html" width="100%" height="700px"></iframe>
+										<iframe id="chartMap" style="display: none;" src="dataviz/rainmap.html" width="100%" height="700px"></iframe>
+										<iframe id="chartBar" style="display: none;" src="dataviz/rainbar.html" width="100%" height="700px"></iframe>
+
+										<div style="text-align: center;">
+											<h3>Under construction</h3>
+										</div>
 							</div>
+							
 						</section>
 
 					</div>
@@ -813,44 +817,28 @@ function Initialize(containerId) {
             startStop = null; 
         }
     }
-
-		/*
-	 	var imgCount = 0;
-		var images = ["images/emission.PNG", "images/greenshot.PNG", "images/greenshottwo.PNG", "images/greenshotthree.PNG"];
-
-		function changeImage() {
-			
-			if (imgCount !== images.length - 1)
-				imgCount++;
-			
-			else 
-				imgCount = 0;
-			var image = document.getElementById('img');
-			image.src = images[imgCount];
-			
-			}
-		*/
 	
 	/* https://codepen.io/StrengthandFreedom/pen/QNgwvg */
 	
 	$(document).ready(function(){
   			$("#spawnBall").toggle(
-    			function(){$("#spawnBall");
 
+    			function(){$("#spawnBall");
 				document.getElementById('spawnBall').innerHTML = "delete balls";
         		b = 8;
 				balls = balls.slice(2);
         
         			for (var i = 0; i < b; ++i) {
-            			balls.push(new Ball(svg, 101, 101, 'n'+(i+1).toString(), color(i),  Math.PI / (i+1), (i+35)));
+            			balls.push(new Ball(svg, 1000, 300, 'n'+(i+1).toString(), color(i),  Math.PI / (i+1), (35)));
 						//console.log(balls.slice(2));
         			}
-					
 			},
+
 				function(){$("svg").remove();
 				document.getElementById('spawnBall').style.display = "none";}
 			);
 		});
+
 	
 		var svg = Initialize('banner');
 		begin();
@@ -859,6 +847,64 @@ function Initialize(containerId) {
 		function displayMessage(){
 			document.getElementById('addMes').style.display = "block";
 		}
+
+
+		
+		//chart button toggle
+		function chartToggle(){
+
+			$("#displayLine").click(
+
+				function(){
+				document.getElementById('chartLine').style.display = "block";
+			
+				if ($("#displayCicle,#displayMap,#displayBar").is(":visible")){
+					document.getElementById('chartCicle').style.display = "none";
+					document.getElementById('chartMap').style.display = "none";
+					document.getElementById('chartBar').style.display = "none";
+				}
+			});
+
+			$("#displayCicle").click(
+
+				function(){
+				document.getElementById('chartCicle').style.display = "block";
+
+				if ($("#displayLine,#displayMap,#displayBar").is(":visible")){
+					document.getElementById('chartLine').style.display = "none";
+					document.getElementById('chartMap').style.display = "none";
+					document.getElementById('chartBar').style.display = "none";
+				}
+			});
+
+			$("#displayMap").click(
+
+				function(){
+				document.getElementById('chartMap').style.display = "block";
+
+				if ($("#displayLine,#displayCicle,#displayBar").is(":visible")){
+					document.getElementById('chartLine').style.display = "none";
+					document.getElementById('chartCicle').style.display = "none";
+					document.getElementById('chartBar').style.display = "none";
+				}
+			});
+
+			$("#displayBar").click(
+
+				function(){
+				document.getElementById('chartBar').style.display = "block";
+						
+				if ($("#displayLine,#displayCicle,#displayMap").is(":visible")){
+					document.getElementById('chartLine').style.display = "none";
+					document.getElementById('chartCicle').style.display = "none";
+					document.getElementById('chartMap').style.display = "none";
+				}
+			});
+
+		}
+
+
+
 				
 		</script>
 
