@@ -3,797 +3,794 @@
 <html>
 
 	<head>
-		<title>Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+	<title>Portfolio</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
 
-		<link rel="stylesheet" href="css/main.css"/>
-		<link rel="stylesheet" href="css/ePopupbox.css"/>
-		<link rel="stylesheet" href="css/indexPage.css"/>
-		<link rel="stylesheet" href="css/fontawesome-all.min.css" />
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		
-		<noscript>
-			<link rel="stylesheet" href="css/noscript.css" />
-		</noscript>
+	<link rel="stylesheet" href="css/main.css"/>
+	<link rel="stylesheet" href="css/ePopupbox.css"/>
+	<link rel="stylesheet" href="css/indexPage.css"/>
+	<link rel="stylesheet" href="css/fontawesome-all.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<noscript>
+		<link rel="stylesheet" href="css/noscript.css" />
+	</noscript>
 
-		<!-- Magnific Popup core CSS file -->
-		<link rel="stylesheet" href="magnific/magnific-popup.css">
+	<!-- Magnific Popup core CSS file -->
+	<link rel="stylesheet" href="magnific/magnific-popup.css">
 
-		<!-- jQuery CDN -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-		<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
-		
-		<!-- Magnific Popup core JS file -->
-		<script src="magnific/jquery.magnific-popup.js"></script>
+	<!-- jQuery CDN -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+	
+	<!-- Magnific Popup core JS file -->
+	<script src="magnific/jquery.magnific-popup.js"></script>
 
-		<script src="scripts/ePopupText.js"></script>
+	<script src="scripts/ePopupText.js"></script>
 
-		<!--D3 javascript libary-->
-		<script src="https://d3js.org/d3.v3.min.js"></script>
-		<link rel="stylesheet" href="scripts/ball.js">
+	<!--D3 javascript libary-->
+	<script src="https://d3js.org/d3.v3.min.js"></script>
+	<link rel="stylesheet" href="scripts/ball.js">
 
-		<style>
-		</style>
+	<style>
+	</style>
 
 	</head>
 
 	<body class="index is-preload">
-		<div id="page-wrapper">
+	<div id="page-wrapper">
 
-			<!-- Header -->
-				<header id="header" class="alt">
-					<h1 id="logo"><a href="index.html"><span>Martin J Boer</span></a></h1>
-					<nav id="nav">
-						<ul>
-							<li class="current"><a href="#projects">Projects</a></li>
-							<li class="current"><a href="#clients">Clients</a></li>
-							<li class="current"><a href="#cta">Contacts</a></li>
-						</ul>
-					</nav>
+	<!-- Header -->
+	<header id="header" class="alt">
+		<h1 id="logo"><a href="index.html"><span>Martin J Boer</span></a></h1>
+		<nav id="nav">
+			<ul>
+				<li class="current"><a href="#projects">Projects</a></li>
+				<li class="current"><a href="#clients">Clients</a></li>
+				<li class="current"><a href="#cta">Contacts</a></li>
+			</ul>
+		</nav>
+	</header>
+			
+	<!-- Banner -->
+	<section id="banner">
+
+		<div class="inner" style="position: relative; z-index: 1;">
+
+			<header>
+				<h2>Portfolio</h2>
+			</header>
+			<p>My Development & Data showcase.</br> </p>
+			<footer>
+				<ul class="buttons stacked">
+					<li><a href="#" class="button fit scrolly" id="spawnBall">Spawn balls</a></li>						
+				</ul>
+			</footer>
+	
+		</div>
+
+	</section>
+
+	<!-- Main -->
+	<article id="main">
+
+		<header class="special container">
+			<h2>My quick <strong>intro here</strong></h2>
+			<p>Im Marty, an IT grad with one year experience,
+			<br/>
+			i find the engagement, results and interest to be a key part's within this feild for me.
+			<br/>
+			Here you will find projects and work from my past internship.
+			</p>
+		</header>
+
+	<!-- Sec 1 -->
+	<section class="wrapper style2 container special-alt">
+
+		<div class="visualbanner">
+		
+			<header><h2>Interactive <strong>data visualisation</strong></h2>
+				<p>D3.js chart</p>
+			</header>
+
+				<div>
+				<ul class="dataVizButtons" style="display: flex; list-style: none; cursor: pointer;">
+					<li><a class="chartBtn" id="displayLine" onclick="chartToggle()" style="text-decoration-line: underline;">Monthly temp</a></li>
+					<li><a class="chartBtn" id="displayCicle" onclick="chartToggle()" style="text-decoration-line: underline;">Yearly temp</a></li>
+					<li><a class="chartBtn" id="displayMap" onclick="chartToggle()" style="text-decoration-line: underline;">Monthly rainfull</a></li>
+					<li><a class="chartBtn" id="displayBar" onclick="chartToggle()" style="text-decoration-line: underline;">Yearly rainfull</a></li>					
+				</ul>
+				</div>
+
+					<iframe id="chartLine" src="dataviz/templine.html" width="100%" height="700px"></iframe>
+					<iframe id="chartCicle" style="display: none;" src="dataviz/tempcicle.html" width="100%" height="700px"></iframe>
+					<iframe id="chartMap" style="display: none;" src="dataviz/rainmap.html" width="100%" height="700px"></iframe>
+					<iframe id="chartBar" style="display: none;" src="dataviz/rainbar.html" width="100%" height="700px"></iframe>
+
+				<div style="text-align: center;">
+					<h3>Under construction</h3>
+				</div>
+		</div>
+		
+	</section>
+
+	</div>
+
+	<!-- Sec 2 -->
+	<section class="wrapper style1 container special" id="projects">
+
+		<header class="special container">
+			<h2>My <strong>projects</strong></h2>
+			<p>A range of work assesments to freetime task's
+			</p>
+		</header>
+
+		<div class="row">
+		<div class="col-4 col-12-narrower">
+
+			<section>
+																						
+				<div class="containerpic">
+					<img src="images/dbs.PNG" alt="Avatar" class="pic" style="cursor: pointer;">
+					
+				<div class="overlaypic">
+					<div class="grid-container">
+						<div class="grid-item"><a class="mag-popup" href="images/dbs.PNG"><img src="images/dbs.PNG" alt="Avatar" class="pic"></a></div>
+						<div class="grid-item"><a class="mag-popup" href="images/dataddl.PNG"><img src="images/dataddl.PNG" alt="Avatar" class="pic"></a></div>
+						<div class="grid-item"><a class="mag-popup" href="images/datadml.PNG"><img src="images/datadml.PNG" alt="Avatar" class="pic"></a></div>
+						<div class="grid-item"><a class="mag-popup" href="images/dataquery.PNG"><img src="images/dataquery.PNG" alt="Avatar" class="pic"></a></div>
+					</div>
+				</div>
+						
+				</div>
+																															
+				<header>
+					<h3>data modeling & SQL</h3>
 				</header>
-				
-			<!-- Banner -->
-				<section id="banner">
+				<p>XTREME Quality Cars Inc is an LMVD selling vehicles. 
+					They order vehicles from their main centre which resides in auckland then are shipped out to the outlet; 
+					vehicles are priced and placed on the lot for sale; 
+					and customers can purchase vehicles.</p>
+			</section>
 
-					<div class="inner" style="position: relative; z-index: 1;">
+			</div>
+			<div class="col-4 col-12-narrower">
+			
+			<section>
+			
+				<!--<a><img id="img" src="images/emission.PNG" alt="emission" style="width: 100%; cursor: pointer;"></a>-->
 
-						<header>
-							<h2>Portfolio</h2>
-						</header>
-						<p>My Development & Data showcase.</br> </p>
-						<footer>
-							<ul class="buttons stacked">
-								<li><a href="#" class="button fit scrolly" id="spawnBall">Spawn balls</a></li>						
-							</ul>
-						</footer>
+				<div class="containerpic">
+					<img src="images/DashboardIndustryEmission.PNG" alt="Avatar" class="pic" style="cursor: pointer;">
+					
+				<div class="overlaypic">
+					<div class="grid-container">
+						<div class="grid-item"><a class="mag-popup" href="images/DashboardIndustryEmission.PNG"><img src="images/DashboardIndustryEmission.PNG" alt="Avatar" class="pic"></a></div>
+						<div class="grid-item"><a class="mag-popup" href="images/DashboardIndustryEmission2.PNG"><img src="images/DashboardIndustryEmission2.PNG" alt="Avatar" class="pic"></a></div>
+						<div class="grid-item"><a class="mag-popup" href="images/greenHouseData.PNG"><img src="images/greenHouseData.PNG" alt="Avatar" class="pic"></a></div>
+						<div class="grid-item"><a class="mag-popup" href="images/Suggestion6.PNG"><img src="images/Suggestion6.PNG" alt="Avatar" class="pic"></a></div>
+					</div>
+				</div>
+						
+				</div>
+
+				<header>
+					<h3>excel data visualisation</h3>
+				</header>
+				<p>Greenhouse gas emissions statistics includes the emission types by industries 2007-2019.</p>
+
+				<!-- popup button -->
+				<a id="emissionBtn" style='cursor:pointer;'>Read more.</a>
+														
+				<!-- the content -->
+				<div id="emissionPopup" class="ePopup">
+				<div class="ePopupContent">
+				<span class="close"></span>
+
+					<h5 class="eSubtitle">Report</h5>
+
+					<div id="eOneSection" onclick="eTextDropdown()">
+						<a id="eArrowOne" class="fa fa-arrow-right"></a>
+						<h3 class="eTitle"><strong>Instructions on how to run and view your visualisation</strong></h3>
+					</div>
+					
+					<div id="ePopupText" class="eTextContent">
+						
+						
+					<p>File installed: Navigate to the Dashboard tab located on the excel file at the bottom, select both the dropdowns and option buttons to change between views that will change charts & fields automatically based on selected.</p>
+
+					<p>Section 1 – Charts: <strong>Top 5 industry’s & Emission types by industry</strong></p>
+					<p>-	Top 5 industries selectable fields are 7 types of emissions: Carbon dioxide, Fluorinated gases, Hydrofluorocarbons, Methane, Nitrous oxide, Perfluorocarbons, Sulphur hexafluoride. Number fields located under chart showing total & change amount for all listed industries on current chart.
+					Industries are ranked by highest amount for the selected emission type. Including showing the past data these industries have seen from 07 to 19.</p>
+
+					<p>-	Emission types by industry showing the top-ranking Industries from the previous chart but an in-depth look into its emission types by industry as an overall % across them that’s contributing to the amount.
+					Selectable buttons are groups 1-3 which include the top 12 industries in total.</p>
+
+					<p>Section 2 – Charts: <strong>Total emissions by industry & by year</strong></p>
+					<p>-	Total by industry revealing the emission types and amount over the period 07-19 as sum, listing 20+ industries it shows the true scale of the emission types showing the amount rather than overall % within the industry.</p>
+
+					<p>-	Total by year includes all industries by emission type for each given year out of the time frame, showing the range, trend and increments amounts for each type. 
+					Number fields relating to this chart are displayed bottom left that will select all 7 emission types, on change effect will come from the dropdown chart top 5, calculating total for each emission type, average for that type and the overall % out of the 7 emission types as rank.
+					</p>
 				
 					</div>
-
-				</section>
-
-			<!-- Main -->
-				<article id="main">
-
-					<header class="special container">
-						<h2>My quick <strong>intro here</strong></h2>
-						<p>Im Marty, an IT grad with one year experience,
-						<br/>
-						i find the engagement, results and interest to be a key part's within this feild for me.
-						<br/>
-						Here you will find projects and work from my past internship.
-						</p>
-					</header>
-
-					<!-- Sec 1 -->
-						<section class="wrapper style2 container special-alt">
-
-							<div class="visualbanner">
-							
-								<header><h2>Interactive <strong>data visualisation</strong></h2>
-									<p>D3.js chart</p>
-								</header>
-
-									<div>
-										<ul class="dataVizButtons" style="display: flex; list-style: none; cursor: pointer;">
-											<li><a class="chartBtn" id="displayLine" onclick="chartToggle()" style="text-decoration-line: underline;">Monthly temp</a></li>
-											<li><a class="chartBtn" id="displayCicle" onclick="chartToggle()" style="text-decoration-line: underline;">Yearly temp</a></li>
-											<li><a class="chartBtn" id="displayMap" onclick="chartToggle()" style="text-decoration-line: underline;">Monthly rainfull</a></li>
-											<li><a class="chartBtn" id="displayBar" onclick="chartToggle()" style="text-decoration-line: underline;">Yearly rainfull</a></li>					
-										</ul>
-									</div>
-
-										<iframe id="chartLine" src="dataviz/templine.html" width="100%" height="700px"></iframe>
-										<iframe id="chartCicle" style="display: none;" src="dataviz/tempcicle.html" width="100%" height="700px"></iframe>
-										<iframe id="chartMap" style="display: none;" src="dataviz/rainmap.html" width="100%" height="700px"></iframe>
-										<iframe id="chartBar" style="display: none;" src="dataviz/rainbar.html" width="100%" height="700px"></iframe>
-
-										<div style="text-align: center;">
-											<h3>Under construction</h3>
-										</div>
-							</div>
-							
-						</section>
-
+					
+					
+					<div id="eTwoSection" onclick="eTextDropdownTwo()">
+						<a id="eArrowTwo" class="fa fa-arrow-right"></a>
+						<h3 class="eTitle"><strong>How to address the data visualization</strong></h3>
 					</div>
+					
+					<div id="ePopupTextTwo" class="eTextContentTwo">
+					<p><strong>1.	Questions that warrant the use of visualization methods</strong></p>
+				<p>how much emissions come from each industry.
+				what is the overall amount and averages for each emission.
+				how many emission types are within each industry.
+				what industries have increased.
+				how the industry emissions have scaled over time.
+				what emission is ranked highest among the industries.
+				what emissions have increased.</p>
+				<p><strong>2.	Description of the source and type of dataset used</strong></p>
+				<p>Stats NZ official data agency is a government department. From the Ministry for the Environment and show production-based gross collects information from people and organisations through censuses and surveys. 
+				</p>
+				<p style="text-decoration-line: underline;">Greenhouse gas emissions (industry and household): Year ended 2019.
+				(Government, 2021)
+				CSV format</p>
 
-					<!-- Sec 2 -->
-						<section class="wrapper style1 container special" id="projects">
+				<p><strong>3.	Visualization techniques evaluated, selected and used</strong></p>
 
-							<header class="special container">
-								<h2>My <strong>projects</strong></h2>
-								<p>A range of work assesments to freetime task's
-								</p>
-							</header>
+				<p><strong>Clustered bar chart:</strong> A horizontal view both for width of chart and text lineament, a dropdown to reduce to a single chart but its fields to change for multiple charts saving space, stacked bars showing any increments over time for each type.
+				<br><strong>Pie chart:</strong> Grouped charts displaying more info but within a good chart size as a whole, a selector to change between multiple groups of charts saving space, A circular view showing a proportional to the fraction of the whole in each type.
+				<br><strong>Area chart:</strong> A single chart scaling across the total for each category by type, volume-based view including each type by colour code for a single category while scaling to the most on one end.
+				<br><strong>Stacked line chart:</strong> A single chart scaling across the total for each year by type, to include all types in a stacked view listing topmost ranked type for comparison as well as any increments over time.</p> 
 
-							<div class="row">
-								<div class="col-4 col-12-narrower">
+				<p>Number fields as extra values for input based from the charts that’s not visible unless calculated from the chart, to display different values for each type once selected from the dropdown.</p>
 
-									<section>
-																												
-										<div class="containerpic">
-											<img src="images/dbs.PNG" alt="Avatar" class="pic" style="cursor: pointer;">
-											
-											<div class="overlaypic">
-											  <div class="grid-container">
-											<div class="grid-item"><a class="mag-popup" href="images/dbs.PNG"><img src="images/dbs.PNG" alt="Avatar" class="pic"></a></div>
-											<div class="grid-item"><a class="mag-popup" href="images/dataddl.PNG"><img src="images/dataddl.PNG" alt="Avatar" class="pic"></a></div>
-											<div class="grid-item"><a class="mag-popup" href="images/datadml.PNG"><img src="images/datadml.PNG" alt="Avatar" class="pic"></a></div>
-											<div class="grid-item"><a class="mag-popup" href="images/dataquery.PNG"><img src="images/dataquery.PNG" alt="Avatar" class="pic"></a></div>
-											  </div>
-											  </div>
-											  
-										  </div>
-																																					
-										<header>
-											<h3>data modeling & SQL</h3>
-										</header>
-										<p>XTREME Quality Cars Inc is an LMVD selling vehicles. 
-											They order vehicles from their main centre which resides in auckland then are shipped out to the outlet; 
-											vehicles are priced and placed on the lot for sale; 
-											and customers can purchase vehicles.</p>
-									</section>
+				<p><strong>4.	Values the visualization provides for a given context</strong></p>
 
-								</div>
-								<div class="col-4 col-12-narrower">
+				<p>Air pollutants responsible for environmental effects such as climate, air pollutions, extreme weather, crop fields and increased wildfires. Other effects such as respiratory diseases, food supply disruptions and reduced atmospheric visibility.</p>
 
-									<section>
-									
-										<!--<a><img id="img" src="images/emission.PNG" alt="emission" style="width: 100%; cursor: pointer;"></a>-->
+				<p>Industries at the most risk of polluting emissions
+				Industries producing the most emissions
+				Industries that saw an increase in their emissions
+				Which emission each industry producers most of
+				Which emissions each industry have
+				What is the most polluting emission among others
+				What direction the industry emissions may be heading
+				</p>
+					</div>
+				
+				
+				<div id="eThreeSection" onclick="eTextDropdownThree()">
+					<a id="eArrowThree" class="fa fa-arrow-right"></a>
+					<h3 class="eTitle"><strong>Conclusion</strong></h3>
+				</div>
+					
+					<div id="ePopupTextThree" class="eTextContentThree">
+					<p id="eTitleSpace"><strong>CO2 Emission: Carbon dioxide 1.9% increase – Overall 45.6% of total emissions.</strong></p>
+				Households saw a 13.662% increase of a difference 2,274.5, 94% of the industry is carbon dioxide and 22.59% of Carbon dioxide’s total.
+				<br>Goods-producing industries saw a -3.3692% decrease of a difference -602.09, 78% of the industry is carbon dioxide and 22.21% of Carbon dioxide’s total.
+				<br>Manufacturing saw a 15.884% increase of a difference 1,526.75, 91% of the industry is carbon dioxide and 13.41% of Carbon dioxide’s total.
+				<br>Service industries saw a 2.8404% increase of a difference 230.56, 86% of the industry is carbon dioxide and 10.23% of Carbon dioxide’s total.
+				<br>Electricity and gas supply saw a -36.474% decrease of a difference -2,747.14, 94% of the industry is carbon dioxide and 7.56% of Carbon dioxide’s total.
+				<p id="eTitleSpace"><strong>CO2 Emission: Fluorinated gases 83% increase – Overall 1.7% of total emissions.</strong></p>
+				Goods-producing industries saw a 112.03% increase of a difference 504.18, 3% of the industry is fluorinated gases and 25.37% of Fluorinated gases total.
+				<br>Service industries saw a 81.265% increase of a difference 319.42, 6% of the industry is fluorinated gases and 20.16% of Fluorinated gases total.
+				<br>Manufacturing saw a 15.93% increase of a difference 56.44, 3% of the industry is fluorinated gases and 13.97% of Fluorinated gases total.
+				<br>Water, sewerage, drainage, and waste services saw a 515.21% increase of a difference 443.8, 9% of the industry is fluorinated gases and 11.01% of Fluorinated gases total.
+				<br>Households saw a 25.843% increase of a difference 64.86, 1% of the industry is fluorinated gases and 10.71% of Fluorinated gases total.
+				<p id="eTitleSpace"><strong>CO2 Emission: Hydrofluorocarbons 90% increase – Overall 1.6% of total emissions.</strong></p>
+				Goods-producing industries saw a 120.8% increase of a difference 466.19, 3% of the industry is hydrofluorocarbons and 24.08% of Hydrofluorocarbons total.
+				<br>Service industries saw a 82.504% increase of a difference 320.85, 6% of the industry is hydrofluorocarbons and 21.20% of Hydrofluorocarbons total.
+				<br>Manufacturing saw a 4.667% increase of a difference 14.26, 3% of the industry is hydrofluorocarbons and 12.52% of Hydrofluorocarbons total.
+				<br>Water, sewerage, drainage, and waste services saw a 577.17% increase of a difference 447.65, 9% of the industry is hydrofluorocarbons and 11.39% of Hydrofluorocarbons total.
+				<br>Households saw a 25.843% increase of a difference 64.86, 1% of the industry is hydrofluorocarbons and 11.32% of Hydrofluorocarbons total.
+				<p id="eTitleSpace"><strong>CO2 Emission: Methane -3.5% decrease – Overall 41.6% of total emissions.</strong></p>
+				Sheep, beef cattle, and grain farming saw a -12.919% decrease of a difference -2,592.31, 80% of the industry is methane and 48.05% of methane’s total.
+				<br>Dairy cattle farming saw a 32.951% increase of a difference 3,140.34, 72% of the industry is methane and 30.03% of methane’s total.
+				<br>Goods-producing industries saw a -18.681% decrease of a difference -644.24, 15% of the industry is methane and 8.07% of methane’s total.
+				<br>Water, sewerage, drainage, and waste services saw a -26.074% decrease of a difference -772.32, 76% of the industry is methane and 6.59% of methane’s total.
+				<br>Poultry, deer, and other livestock farming saw a -32.585% decrease of a difference -360.91, 69% of the industry is methane and 2.17% of methane’s total.
+				<p id="eTitleSpace"><strong>CO2 Emission: Nitrous oxide 11% increase – Overall 9.5% of total emissions.</strong></p>
+				Sheep, beef cattle, and grain farming saw a -2.289% decrease of a difference -84.65, 16% of the industry is nitrous oxide and 42.38% of Nitrous oxide’s total.
+				<br>Dairy cattle farming saw a 35.346% increase of a difference 1,033.4, 22% of the industry is nitrous oxide and 41.69% of Nitrous oxide’s total.
+				<br>Poultry, deer, and other livestock farming saw a -20.306% decrease of a difference -58.94, 20% of the industry is nitrous oxide and 2.77% of Nitrous oxide’s total.
+				<br>Goods-producing industries saw a 18.112% increase of a difference 35.93, 1% of the industry is nitrous oxide and 2.44% of Nitrous oxide’s total.
+				<br>Service industries saw a 24.71% increase of a difference 32.36, 2% of the industry is nitrous oxide and 1.62% of Nitrous oxide’s total.
+				<p id="eTitleSpace"><strong>perfluorocarbons up over 85% and sulphur hexafluoride down -21%. Overall, 0.1% of total emissions.</strong></p>
+					</div><br>
+					
+				</div>
+				</div>
 
-										<div class="containerpic">
-											<img src="images/DashboardIndustryEmission.PNG" alt="Avatar" class="pic" style="cursor: pointer;">
-											
-											<div class="overlaypic">
-											  <div class="grid-container">
-											<div class="grid-item"><a class="mag-popup" href="images/DashboardIndustryEmission.PNG"><img src="images/DashboardIndustryEmission.PNG" alt="Avatar" class="pic"></a></div>
-											<div class="grid-item"><a class="mag-popup" href="images/DashboardIndustryEmission2.PNG"><img src="images/DashboardIndustryEmission2.PNG" alt="Avatar" class="pic"></a></div>
-											<div class="grid-item"><a class="mag-popup" href="images/greenHouseData.PNG"><img src="images/greenHouseData.PNG" alt="Avatar" class="pic"></a></div>
-											<div class="grid-item"><a class="mag-popup" href="images/Suggestion6.PNG"><img src="images/Suggestion6.PNG" alt="Avatar" class="pic"></a></div>
-											  </div>
-											  </div>
-											  
-										  </div>
+			</section>
 
-										<header>
-											<h3>excel data visualisation</h3>
-										</header>
-										<p>Greenhouse gas emissions statistics includes the emission types by industries 2007-2019.</p>
+			</div>
+			<div class="col-4 col-12-narrower">
 
-										<!-- popup button -->
-										<a id="emissionBtn" style='cursor:pointer;'>Read more.</a>
-																				
-										<!-- the content -->
-										<div id="emissionPopup" class="ePopup">
-										<div class="ePopupContent">
-										<span class="close"></span>
+				<section>
 
-											<h5 class="eSubtitle">Report</h5>
+					<!--<a class="mag-popup" href="images/jobseek.PNG">
+					<a><img id="pic" src="images/jobseek.PNG" alt="js" style="width: 100%; cursor: pointer;"></a>
+					-->
 
-											<div id="eOneSection" onclick="eTextDropdown()">
-											<a id="eArrowOne" class="fa fa-arrow-right"></a>
-											<h3 class="eTitle"><strong>Instructions on how to run and view your visualisation</strong></h3>
-											</div>
-											
-											<div id="ePopupText" class="eTextContent">
-												
-												
-											<p>File installed: Navigate to the Dashboard tab located on the excel file at the bottom, select both the dropdowns and option buttons to change between views that will change charts & fields automatically based on selected.</p>
-
-											<p>Section 1 – Charts: <strong>Top 5 industry’s & Emission types by industry</strong></p>
-											<p>-	Top 5 industries selectable fields are 7 types of emissions: Carbon dioxide, Fluorinated gases, Hydrofluorocarbons, Methane, Nitrous oxide, Perfluorocarbons, Sulphur hexafluoride. Number fields located under chart showing total & change amount for all listed industries on current chart.
-											Industries are ranked by highest amount for the selected emission type. Including showing the past data these industries have seen from 07 to 19.</p>
-
-											<p>-	Emission types by industry showing the top-ranking Industries from the previous chart but an in-depth look into its emission types by industry as an overall % across them that’s contributing to the amount.
-											Selectable buttons are groups 1-3 which include the top 12 industries in total.</p>
-
-											<p>Section 2 – Charts: <strong>Total emissions by industry & by year</strong></p>
-											<p>-	Total by industry revealing the emission types and amount over the period 07-19 as sum, listing 20+ industries it shows the true scale of the emission types showing the amount rather than overall % within the industry.</p>
-
-											<p>-	Total by year includes all industries by emission type for each given year out of the time frame, showing the range, trend and increments amounts for each type. 
-											Number fields relating to this chart are displayed bottom left that will select all 7 emission types, on change effect will come from the dropdown chart top 5, calculating total for each emission type, average for that type and the overall % out of the 7 emission types as rank.
-											</p>
-										
-											</div>
-											
-											
-											<div id="eTwoSection" onclick="eTextDropdownTwo()">
-											<a id="eArrowTwo" class="fa fa-arrow-right"></a>
-											<h3 class="eTitle"><strong>How to address the data visualization</strong></h3>
-											</div>
-											
-											<div id="ePopupTextTwo" class="eTextContentTwo">
-											<p><strong>1.	Questions that warrant the use of visualization methods</strong></p>
-										<p>how much emissions come from each industry.
-										what is the overall amount and averages for each emission.
-										how many emission types are within each industry.
-										what industries have increased.
-										how the industry emissions have scaled over time.
-										what emission is ranked highest among the industries.
-										what emissions have increased.</p>
-										<p><strong>2.	Description of the source and type of dataset used</strong></p>
-										<p>Stats NZ official data agency is a government department. From the Ministry for the Environment and show production-based gross collects information from people and organisations through censuses and surveys. 
-										</p>
-										<p style="text-decoration-line: underline;">Greenhouse gas emissions (industry and household): Year ended 2019.
-										(Government, 2021)
-										CSV format</p>
-
-										<p><strong>3.	Visualization techniques evaluated, selected and used</strong></p>
-
-										<p><strong>Clustered bar chart:</strong> A horizontal view both for width of chart and text lineament, a dropdown to reduce to a single chart but its fields to change for multiple charts saving space, stacked bars showing any increments over time for each type.
-										<br><strong>Pie chart:</strong> Grouped charts displaying more info but within a good chart size as a whole, a selector to change between multiple groups of charts saving space, A circular view showing a proportional to the fraction of the whole in each type.
-										<br><strong>Area chart:</strong> A single chart scaling across the total for each category by type, volume-based view including each type by colour code for a single category while scaling to the most on one end.
-										<br><strong>Stacked line chart:</strong> A single chart scaling across the total for each year by type, to include all types in a stacked view listing topmost ranked type for comparison as well as any increments over time.</p> 
-
-										<p>Number fields as extra values for input based from the charts that’s not visible unless calculated from the chart, to display different values for each type once selected from the dropdown.</p>
-
-										<p><strong>4.	Values the visualization provides for a given context</strong></p>
-
-										<p>Air pollutants responsible for environmental effects such as climate, air pollutions, extreme weather, crop fields and increased wildfires. Other effects such as respiratory diseases, food supply disruptions and reduced atmospheric visibility.</p>
-
-										<p>Industries at the most risk of polluting emissions
-										Industries producing the most emissions
-										Industries that saw an increase in their emissions
-										Which emission each industry producers most of
-										Which emissions each industry have
-										What is the most polluting emission among others
-										What direction the industry emissions may be heading
-										</p>
-											</div>
-										
-										
-										<div id="eThreeSection" onclick="eTextDropdownThree()">
-											<a id="eArrowThree" class="fa fa-arrow-right"></a>
-											<h3 class="eTitle"><strong>Conclusion</strong></h3>
-											</div>
-											
-											<div id="ePopupTextThree" class="eTextContentThree">
-											<p id="eTitleSpace"><strong>CO2 Emission: Carbon dioxide 1.9% increase – Overall 45.6% of total emissions.</strong></p>
-										Households saw a 13.662% increase of a difference 2,274.5, 94% of the industry is carbon dioxide and 22.59% of Carbon dioxide’s total.
-										<br>Goods-producing industries saw a -3.3692% decrease of a difference -602.09, 78% of the industry is carbon dioxide and 22.21% of Carbon dioxide’s total.
-										<br>Manufacturing saw a 15.884% increase of a difference 1,526.75, 91% of the industry is carbon dioxide and 13.41% of Carbon dioxide’s total.
-										<br>Service industries saw a 2.8404% increase of a difference 230.56, 86% of the industry is carbon dioxide and 10.23% of Carbon dioxide’s total.
-										<br>Electricity and gas supply saw a -36.474% decrease of a difference -2,747.14, 94% of the industry is carbon dioxide and 7.56% of Carbon dioxide’s total.
-										<p id="eTitleSpace"><strong>CO2 Emission: Fluorinated gases 83% increase – Overall 1.7% of total emissions.</strong></p>
-										Goods-producing industries saw a 112.03% increase of a difference 504.18, 3% of the industry is fluorinated gases and 25.37% of Fluorinated gases total.
-										<br>Service industries saw a 81.265% increase of a difference 319.42, 6% of the industry is fluorinated gases and 20.16% of Fluorinated gases total.
-										<br>Manufacturing saw a 15.93% increase of a difference 56.44, 3% of the industry is fluorinated gases and 13.97% of Fluorinated gases total.
-										<br>Water, sewerage, drainage, and waste services saw a 515.21% increase of a difference 443.8, 9% of the industry is fluorinated gases and 11.01% of Fluorinated gases total.
-										<br>Households saw a 25.843% increase of a difference 64.86, 1% of the industry is fluorinated gases and 10.71% of Fluorinated gases total.
-										<p id="eTitleSpace"><strong>CO2 Emission: Hydrofluorocarbons 90% increase – Overall 1.6% of total emissions.</strong></p>
-										Goods-producing industries saw a 120.8% increase of a difference 466.19, 3% of the industry is hydrofluorocarbons and 24.08% of Hydrofluorocarbons total.
-										<br>Service industries saw a 82.504% increase of a difference 320.85, 6% of the industry is hydrofluorocarbons and 21.20% of Hydrofluorocarbons total.
-										<br>Manufacturing saw a 4.667% increase of a difference 14.26, 3% of the industry is hydrofluorocarbons and 12.52% of Hydrofluorocarbons total.
-										<br>Water, sewerage, drainage, and waste services saw a 577.17% increase of a difference 447.65, 9% of the industry is hydrofluorocarbons and 11.39% of Hydrofluorocarbons total.
-										<br>Households saw a 25.843% increase of a difference 64.86, 1% of the industry is hydrofluorocarbons and 11.32% of Hydrofluorocarbons total.
-										<p id="eTitleSpace"><strong>CO2 Emission: Methane -3.5% decrease – Overall 41.6% of total emissions.</strong></p>
-										Sheep, beef cattle, and grain farming saw a -12.919% decrease of a difference -2,592.31, 80% of the industry is methane and 48.05% of methane’s total.
-										<br>Dairy cattle farming saw a 32.951% increase of a difference 3,140.34, 72% of the industry is methane and 30.03% of methane’s total.
-										<br>Goods-producing industries saw a -18.681% decrease of a difference -644.24, 15% of the industry is methane and 8.07% of methane’s total.
-										<br>Water, sewerage, drainage, and waste services saw a -26.074% decrease of a difference -772.32, 76% of the industry is methane and 6.59% of methane’s total.
-										<br>Poultry, deer, and other livestock farming saw a -32.585% decrease of a difference -360.91, 69% of the industry is methane and 2.17% of methane’s total.
-										<p id="eTitleSpace"><strong>CO2 Emission: Nitrous oxide 11% increase – Overall 9.5% of total emissions.</strong></p>
-										Sheep, beef cattle, and grain farming saw a -2.289% decrease of a difference -84.65, 16% of the industry is nitrous oxide and 42.38% of Nitrous oxide’s total.
-										<br>Dairy cattle farming saw a 35.346% increase of a difference 1,033.4, 22% of the industry is nitrous oxide and 41.69% of Nitrous oxide’s total.
-										<br>Poultry, deer, and other livestock farming saw a -20.306% decrease of a difference -58.94, 20% of the industry is nitrous oxide and 2.77% of Nitrous oxide’s total.
-										<br>Goods-producing industries saw a 18.112% increase of a difference 35.93, 1% of the industry is nitrous oxide and 2.44% of Nitrous oxide’s total.
-										<br>Service industries saw a 24.71% increase of a difference 32.36, 2% of the industry is nitrous oxide and 1.62% of Nitrous oxide’s total.
-										<p id="eTitleSpace"><strong>perfluorocarbons up over 85% and sulphur hexafluoride down -21%. Overall, 0.1% of total emissions.</strong></p>
-											</div><br>
-											
-										</div>
-										</div>
-
-
-
-										  
-									</section>
-
-								</div>
-								<div class="col-4 col-12-narrower">
-
-									<section>
-
-										<!--<a class="mag-popup" href="images/jobseek.PNG">
-										<a><img id="pic" src="images/jobseek.PNG" alt="js" style="width: 100%; cursor: pointer;"></a>
-										-->
-
-										<div class="containerpic">
-											<img src="images/jobseek.PNG" alt="Avatar" class="pic" style="cursor: pointer;">
-											
-											<div class="overlaypic">
-											  <div class="grid-container">
-											<div class="grid-item"><a class="mag-popup" href="images/jobseek.PNG"><img src="images/jobseek.PNG" alt="Avatar" class="pic"></a></div>
-											<div class="grid-item"><a class="mag-popup" href="images/jobseekcreate.PNG"><img src="images/jobseekcreate.PNG" alt="Avatar" class="pic"></a></div>
-											<div class="grid-item"><a class="mag-popup" href="images/jobseekview.PNG"><img src="images/jobseekview.PNG" alt="Avatar" class="pic"></a></div>
-											  </div>
-											  </div>
-											  
-										  </div>
-
-										<header>
-											<h3>Job Lister</h3>
-										</header>
-										<p>A simple function to create, edit, delete and view by category. 
-											This could also be used for a question bank, category could dropdown and select hardware related iusses.</p>
-									</section>
-
-								</div>
-							</div>
-						</section>
-
-					<!-- Sec 3 -->
-						<section class="wrapper style3 container special" id="clients">
-
-							<header class="major">
-								<h2>websites <strong>for clients</strong></h2>
-							</header>
-
-							<div class="row">
-								<div class="col-6 col-12-narrower">
-
-									<section>
-										<a href="https://vetcarevets.co.nz" class="image featured" target="_blank">
-											<img src="images/vetcare.png" alt="vetcarevets"/>
-										</a>
-										<header>
-											<h3><a class="weblink" href="https://vetcarevets.co.nz" target="_blank">vetcarevets.co.nz</a></h3>
-										</header>
-										<p>Offering general medical and animal surgery services as well as behaviour advice, senior pet checks, nail and dental checks and more. 
-											Assigned with a project manager & a given time assessment i build the site within wordpress including seo & dns setup.</p>
-									</section>
-
-								</div>
-								<div class="col-6 col-12-narrower">
-
-									<section>
-										<a href="https://www.mostwantedcheese.co.nz" class="image featured" target="_blank">
-											<img src="images/mostwantedcheese.png" alt="mostwantedcheese"/>
-										</a>
-										<header>
-											<h3><a class="weblink" href="https://www.mostwantedcheese.co.nz" target="_blank">mostwantedcheese.co.nz</a></h3>
-										</header>
-										<p>Providing a lip smacking line up of cheese toasties from around the world as well as a selection of cheese inspired savoury and sweet treats, 
-											from catering to food franshiseing. Assigned with a project manager & a given time assessment i build the site within squarespace including seo & dns setup.</p>
-									</section>
-
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-6 col-12-narrower">
-
-									<section>
-										<a href="https://fishdigital.co.nz" class="image featured" target="_blank">
-											<img src="images/fishdigital.png" alt="fishdigital"/>
-										</a>
-										<header>
-											<h3><a class="weblink" href="https://fishdigital.co.nz" target="_blank">fishdigital.co.nz</a></h3>
-										</header>
-										<p>Delivering digital marketing and digital commerce, businesses will learn how to for business by actioning a simple digital marketing blueprint.
-											Brand identity, website, social media, partners and activating and growing a loyal following. 
-											Build within wordpress including seo & dns setup.</p>
-									</section>
-
-								</div>
-								<div class="col-6 col-12-narrower">
-
-									<section>
-										<a href="https://hopefish.org.nz" class="image featured" target="_blank">
-											<img src="images/hopefish.png" alt="hopefish"/>
-										</a>
-										<header>
-											<h3><a class="weblink" href="https://hopefish.org.nz" target="_blank">hopefish.org.nz</a></h3>
-										</header>
-										<p>Developing a solidarity structure that delivers real support, real opportunity and real inclusion to socially disadvantaged women and their children. 
-											A charity co-creating a purposeful vision & walking alongside the activation effort. 
-											Build within wordpress included seo & dns setup.</p>
-									</section>
-
-								</div>
-							</div>
-
-							<footer class="major">
-								<ul class="buttons">
-									<li><a href="#" class="button">See More</a></li>
-								</ul>
-							</footer>
-
-						</section>
-
-				</article>
-
-			<!-- CTA -->
-				<section id="cta">
+					<div class="containerpic">
+						<img src="images/jobseek.PNG" alt="Avatar" class="pic" style="cursor: pointer;">
+						
+					<div class="overlaypic">
+						<div class="grid-container">
+							<div class="grid-item"><a class="mag-popup" href="images/jobseek.PNG"><img src="images/jobseek.PNG" alt="Avatar" class="pic"></a></div>
+							<div class="grid-item"><a class="mag-popup" href="images/jobseekcreate.PNG"><img src="images/jobseekcreate.PNG" alt="Avatar" class="pic"></a></div>
+							<div class="grid-item"><a class="mag-popup" href="images/jobseekview.PNG"><img src="images/jobseekview.PNG" alt="Avatar" class="pic"></a></div>
+						</div>
+					</div>
+							
+					</div>
 
 					<header>
-						<h2>Get in <strong> contact with me</strong></h2>
-						<p>Information on projects, courses and jobs are very welcome.</p>
+						<h3>Job Lister</h3>
 					</header>
-					<footer>
-						<ul class="buttons">
-							<li>
-								<a id="myBtn" class="button primary">Notify</a>
-							</li>
-						</ul>
-					</footer>
-
-					<!-- Github pages does not support php -->
-				<div id="myModal" class="modal">
-
-					<!-- Modal content -->
-					<div class="modal-content">
-					<span class="close">&times;</span>
-					<div class="form-popup" id="myForm">
-
-					<form action="form_page.php" class="form-container" id="contactForm" method="POST">
-					<h1 style="color: #7c8081; display: block; text-align: left;"><strong>Form</strong></h1>
-
-					<div class="response"></div>
-				
-					<label for="name" style="color: #7c8081; display: block;"><b>Name</b></label>
-					<input class="inputborder" type="text" placeholder="Enter Name" name="name">
-					
-					<label for="email" style="color: #7c8081; display: block;"><b>Email</b></label>
-					<input class="inputborder" type="email" placeholder="Enter Email" name="email">
-
-					<label for="subject" style="color: #7c8081; display: block;"><b>Subject</b></label>
-					<input class="inputborder" type="text" placeholder="Enter Subject" name="subject">
-				
-					<label for="message" style="color: #7c8081; display: block;"><b>Message</b></label><br>
-					<textarea class="inputborder" id="textarea" rows="4" cols="75" style="display: block; margin-inline: auto;" name="message"></textarea>
-				
-					<button type="submit" name="submit" class="btn" id="disMes" onclick="displayMessage()">Submit</button>
-					</form>
-
-					</div>
-					<!--added display messge for form not working on github pages-->
-					<div id="addMes" style="display: none;" onclick="displayMessage()">
-						<p style="color:black">Currently not working on <strong>github pages,</strong>
-							<br>you can contact me on <a href="tel:0277260260" style="cursor: pointer;">0277260260</a> or email me at <a href="mailto:martinboer81@gmail.com" style="cursor: pointer;">martinboer81</a></p>
-					</div>
-
-				</div>
-
-				</div>
-
+					<p>A simple function to create, edit, delete and view by category. 
+						This could also be used for a question bank, category could dropdown and select hardware related iusses.</p>
 				</section>
 
-			<!-- Footer -->
-				<footer id="footer">
+			</div>
+		</div>
+	</section>
 
-					<ul class="icons">
-						<li><a href="https://www.linkedin.com/in/martin-boer-b16b6013b" class="fa fa-linkedin" target="_blank"><span class="label">Linkedin</span></a></li>
-						<li><a href="https://github.com/marboe29" class="fa fa-github" target="_blank"><span class="label">Github</span></a></li>
-					</ul>
+	<!-- Sec 3 -->
+	<section class="wrapper style3 container special" id="clients">
 
-					<ul class="copyright">
-						<li>&copy;Copyright</li>
-						<li>Martin j Boer</li>
-					</ul>
+		<header class="major">
+			<h2>websites <strong>for clients</strong></h2>
+		</header>
 
-				</footer>
+		<div class="row">
+			<div class="col-6 col-12-narrower">
 
+				<section>
+					<a href="https://vetcarevets.co.nz" class="image featured" target="_blank">
+						<img src="images/vetcare.png" alt="vetcarevets"/>
+					</a>
+					<header>
+						<h3><a class="weblink" href="https://vetcarevets.co.nz" target="_blank">vetcarevets.co.nz</a></h3>
+					</header>
+					<p>Offering general medical and animal surgery services as well as behaviour advice, senior pet checks, nail and dental checks and more. 
+						Assigned with a project manager & a given time assessment i build the site within wordpress including seo & dns setup.</p>
+				</section>
+
+			</div>
+			<div class="col-6 col-12-narrower">
+
+				<section>
+					<a href="https://www.mostwantedcheese.co.nz" class="image featured" target="_blank">
+						<img src="images/mostwantedcheese.png" alt="mostwantedcheese"/>
+					</a>
+					<header>
+						<h3><a class="weblink" href="https://www.mostwantedcheese.co.nz" target="_blank">mostwantedcheese.co.nz</a></h3>
+					</header>
+					<p>Providing a lip smacking line up of cheese toasties from around the world as well as a selection of cheese inspired savoury and sweet treats, 
+						from catering to food franshiseing. Assigned with a project manager & a given time assessment i build the site within squarespace including seo & dns setup.</p>
+				</section>
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-6 col-12-narrower">
+
+				<section>
+					<a href="https://fishdigital.co.nz" class="image featured" target="_blank">
+						<img src="images/fishdigital.png" alt="fishdigital"/>
+					</a>
+					<header>
+						<h3><a class="weblink" href="https://fishdigital.co.nz" target="_blank">fishdigital.co.nz</a></h3>
+					</header>
+					<p>Delivering digital marketing and digital commerce, businesses will learn how to for business by actioning a simple digital marketing blueprint.
+						Brand identity, website, social media, partners and activating and growing a loyal following. 
+						Build within wordpress including seo & dns setup.</p>
+				</section>
+
+			</div>
+			<div class="col-6 col-12-narrower">
+
+				<section>
+					<a href="https://hopefish.org.nz" class="image featured" target="_blank">
+						<img src="images/hopefish.png" alt="hopefish"/>
+					</a>
+					<header>
+						<h3><a class="weblink" href="https://hopefish.org.nz" target="_blank">hopefish.org.nz</a></h3>
+					</header>
+					<p>Developing a solidarity structure that delivers real support, real opportunity and real inclusion to socially disadvantaged women and their children. 
+						A charity co-creating a purposeful vision & walking alongside the activation effort. 
+						Build within wordpress included seo & dns setup.</p>
+				</section>
+
+			</div>
+		</div>
+
+		<footer class="major">
+			<ul class="buttons">
+				<li><a href="#" class="button">See More</a></li>
+			</ul>
+		</footer>
+
+	</section>
+
+	</article>
+
+	<!-- CTA -->
+	<section id="cta">
+
+		<header>
+			<h2>Get in <strong> contact with me</strong></h2>
+			<p>Information on projects, courses and jobs are very welcome.</p>
+		</header>
+		<footer>
+			<ul class="buttons">
+				<li>
+					<a id="myBtn" class="button primary">Notify</a>
+				</li>
+			</ul>
+		</footer>
+
+	<!-- Github pages does not support php -->
+	<div id="myModal" class="modal">
+
+		<!-- Modal content -->
+		<div class="modal-content">
+		<span class="close">&times;</span>
+		<div class="form-popup" id="myForm">
+
+		<form action="form_page.php" class="form-container" id="contactForm" method="POST">
+		<h1 style="color: #7c8081; display: block; text-align: left;"><strong>Form</strong></h1>
+
+		<div class="response"></div>
+	
+		<label for="name" style="color: #7c8081; display: block;"><b>Name</b></label>
+		<input class="inputborder" type="text" placeholder="Enter Name" name="name">
+		
+		<label for="email" style="color: #7c8081; display: block;"><b>Email</b></label>
+		<input class="inputborder" type="email" placeholder="Enter Email" name="email">
+
+		<label for="subject" style="color: #7c8081; display: block;"><b>Subject</b></label>
+		<input class="inputborder" type="text" placeholder="Enter Subject" name="subject">
+	
+		<label for="message" style="color: #7c8081; display: block;"><b>Message</b></label><br>
+		<textarea class="inputborder" id="textarea" rows="4" cols="75" style="display: block; margin-inline: auto;" name="message"></textarea>
+	
+		<button type="submit" name="submit" class="btn" id="disMes" onclick="displayMessage()">Submit</button>
+		</form>
 
 		</div>
+		<!--added display messge for form not working on github pages-->
+		<div id="addMes" style="display: none;" onclick="displayMessage()">
+			<p style="color:black">Currently not working on <strong>github pages,</strong>
+				<br>you can contact me on <a href="tel:0277260260" style="cursor: pointer;">0277260260</a> or email me at <a href="mailto:martinboer81@gmail.com" style="cursor: pointer;">martinboer81</a></p>
+		</div>
+
+	</div>
+
+	</div>
+
+	</section>
+
+	<!-- Footer -->
+	<footer id="footer">
+
+		<ul class="icons">
+			<li><a href="https://www.linkedin.com/in/martin-boer-b16b6013b" class="fa fa-linkedin" target="_blank"><span class="label">Linkedin</span></a></li>
+			<li><a href="https://github.com/marboe29" class="fa fa-github" target="_blank"><span class="label">Github</span></a></li>
+		</ul>
+
+		<ul class="copyright">
+			<li>&copy;Copyright</li>
+			<li>Martin j Boer</li>
+		</ul>
+
+	</footer>
+
+
+	</div>
 
 	</body>
 	
-		<!-- Scripts -->
-		<script type="text/javascript">
-			
-			
-			//jquery lib
-			$(document).ready(function() {
-			  $('.mag-popup').magnificPopup({type:'image'});
-			});
-
-			$(document).ready(function(){
-				$('#contactForm').submit(function(event){
-
-					//preventDefault method cancels the default action of the event.
-					event.preventDefault();
-
-					$form = $(this);
-
-					$.ajax({
-						type: "POST",
-						url: 'form_page.php', //serialize method, creates a text string with name attributes.
-						data: 'submit=1&'+$form.serialize(),
-						datatype: 'json',
-						success: function(response){
-							if(status == 1){
-								$('.response').html('<div class="fa fa-check" style="color:#3fb1a3">'+response+'</div>');
-								//$('#contactForm')[0].reset(); jquery doesnt have a reset method converts it to javascript object
-								$('#contactForm').trigger("reset");
-
-							}else{
-								$('.response').html('<div class="fa fa-warning" style="color:red">'+response+'</div>');
-								//$('.inputborder').attr("style", "border: 1px solid red;").trigger("reset");
-							}
-						}
-
-					});
-
-				});
-
-			});
-			
-
-		//Gets the contact form
-		var modal = $('#myModal');
-		//Get the button that opens the contact form
-		var btn = $('#myBtn');
-		//Get the <span> element that closes the contact form
-		var span = $('.close');
+	<!-- Scripts -->
+	<script type="text/javascript">
 		
-		$(document).ready(function(){
-			//When the user clicks the button, open the form
-			btn.on('click', function(){
-				modal.show();
-			});
-			//When the user clicks on <span> (x), close the form
-			span.on('click', function(){
-				modal.hide();
+
+	//jquery lib
+	$(document).ready(function() {
+		$('.mag-popup').magnificPopup({type:'image'});
+	});
+
+	$(document).ready(function(){
+		$('#contactForm').submit(function(event){
+
+			//preventDefault method cancels the default action of the event.
+			event.preventDefault();
+
+			$form = $(this);
+
+			$.ajax({
+				type: "POST",
+				url: 'form_page.php', //serialize method, creates a text string with name attributes.
+				data: 'submit=1&'+$form.serialize(),
+				datatype: 'json',
+				success: function(response){
+					if(status == 1){
+						$('.response').html('<div class="fa fa-check" style="color:#3fb1a3">'+response+'</div>');
+						//$('#contactForm')[0].reset(); jquery doesnt have a reset method converts it to javascript object
+						$('#contactForm').trigger("reset");
+
+					}else{
+						$('.response').html('<div class="fa fa-warning" style="color:red">'+response+'</div>');
+						//$('.inputborder').attr("style", "border: 1px solid red;").trigger("reset");
+					}
+				}
+
 			});
 
 		});
-		//When the user clicks anywhere outside of the form, close it
-		$('body').bind('click', function(event){
-			if ($(event.target).hasClass("modal")){
-					modal.hide();
-			}
-		});
 
-		//Gets the emission projects popup text
-		var ePopup = document.getElementById("emissionPopup");
-		var eBtn = document.getElementById("emissionBtn");
+	});
+		
 
-		eBtn.onclick = function() {
-		ePopup.style.display = "block";
-		}
-
-		window.onclick = function(event) {
-		if (event.target == ePopup) {
-			ePopup.style.display = "none";
-		}
-		}
-
-
-// Ball object - multiple balls can be created by instantiating new objects
-function Ball(svg, x, y, id, color, aoa, weight) {
-    this.posX = x; // cx
-    this.posY = y; // cy
-    this.color = color;
-    this.radius = weight; // radius and weight same
-    this.jumpSize = 1; // equivalent of speed default to 1
-    this.svg = svg; // parent SVG
-    this.id = id; // id of ball
-    this.aoa = aoa; // angle of attack
-    this.weight = weight;
-
-    if (!this.aoa)
-        this.aoa = Math.PI / 7;
-    if (!this.weight)
-        this.weight = 10;
-    this.radius = this.weight;
-
-    this.data = [this.id]; // allow us to use d3.enter()
-
-    var thisobj = this; // i like to use thisobj instead of this. this many times not reliable particularly handling evnet
-
-    // **** aoa is used only here -- earlier I was using to next move position.
-    // Now aoa and speed together is velocity 
-    this.vx = Math.cos(thisobj.aoa) * thisobj.jumpSize; // velocity x
-    this.vy = Math.sin(thisobj.aoa) * thisobj.jumpSize; // velocity y
-    this.initialVx = this.vx;
-    this.initialVy = this.vy;
-    this.initialPosX = this.posX;
-    this.initialPosY = this.posY;
-
-    // when speed changes, go to initial setting
-    this.GoToInitialSettings = function (newjumpSize) {
-        thisobj.posX = thisobj.initialPosX;
-        thisobj.posY = thisobj.initialPosY;
-        thisobj.vx = Math.cos(thisobj.aoa) * newjumpSize; // velocity x
-        thisobj.vy = Math.sin(thisobj.aoa) * newjumpSize; // velocity y
-        thisobj.Draw();
-    }
-
-    this.Draw = function () {
-        var svg = thisobj.svg;
-        var ball = svg.selectAll('#' + thisobj.id)
-                    .data(thisobj.data)
-                ;
-        ball.enter()
-            .append("circle")
-            .attr({"id" : thisobj.id, 'class' : 'ball', 'r' : thisobj.radius, 'weight' : thisobj.weight})
-            .style("fill", thisobj.color)
-            ;
-        ball
-            //.transition()//.duration(50)
-            .attr("cx", thisobj.posX)
-            .attr("cy", thisobj.posY)
-        ;
-        // intersect ball is used to show collision effect - every ball has it's own intersect ball
-        var intersectBall = ball.enter()
-                            .append('circle')
-                            .attr({ 'id': thisobj.id + '_intersect', 'class': 'intersectBall' });
-    }
-
-    this.Move = function () {
-        var svg = thisobj.svg;
-
-        //thisobj.posX += Math.cos(thisobj.aoa) * thisobj.jumpSize;
-        //thisobj.posY += Math.sin(thisobj.aoa) * thisobj.jumpSize;
-
-        thisobj.posX += thisobj.vx;
-        thisobj.posY += thisobj.vy;
-
-        if (parseInt(svg.attr('width')) <= (thisobj.posX + thisobj.radius)) {
-            thisobj.posX = parseInt(svg.attr('width')) - thisobj.radius - 1;
-            thisobj.aoa = Math.PI - thisobj.aoa;
-            thisobj.vx = -thisobj.vx;
-        }
-
-        if ( thisobj.posX < thisobj.radius) {
-            thisobj.posX = thisobj.radius+1;
-            thisobj.aoa = Math.PI - thisobj.aoa;
-            thisobj.vx = -thisobj.vx;
-        }
-
-        if (parseInt(svg.attr('height')) < (thisobj.posY + thisobj.radius)) {
-            thisobj.posY = parseInt(svg.attr('height')) - thisobj.radius - 1;
-            thisobj.aoa = 2 * Math.PI - thisobj.aoa;
-            thisobj.vy = -thisobj.vy;
-        }
-
-        if (thisobj.posY < thisobj.radius) {
-            thisobj.posY = thisobj.radius+1;
-            thisobj.aoa = 2 * Math.PI - thisobj.aoa;
-            thisobj.vy = -thisobj.vy;
-        }
-
-        // **** NOT USING AOA except during initilization. Just left this for future reference ***** 
-        if (thisobj.aoa > 2 * Math.PI)
-            thisobj.aoa = thisobj.aoa - 2 * Math.PI;
-        if (thisobj.aoa < 0)
-            thisobj.aoa = 2 * Math.PI + thisobj.aoa;
-
-        thisobj.Draw();
-    }
-}
-
-function CheckCollision(ball1, ball2) {
-    var absx = Math.abs(parseFloat(ball2.posX) - parseFloat(ball1.posX));
-    var absy = Math.abs(parseFloat(ball2.posY) - parseFloat(ball1.posY));
-
-    // find distance between two balls.
-    var distance = (absx * absx) + (absy * absy);
-    distance = Math.sqrt(distance);
-    // check if distance is less than sum of two radius - if yes, collision
-    if (distance < (parseFloat(ball1.radius) + parseFloat(ball2.radius))) {
-        return true;
-    }
-    return false;
-}
-
-var balls = []; // global array representing balls
-var color = d3.scale.category20();
-
-//courtsey thanks to several internet sites for formulas
-//detect collision, find intersecting point and set new speed+direction for each ball based on weight (weight=radius)
-function ProcessCollision(ball1, ball2) {
-
-    if (ball2 <= ball1)
-        return;
-    if (ball1 >= (balls.length-1) || ball2 >= balls.length )
-        return;
-
-    ball1 = balls[ball1];
-    ball2 = balls[ball2];
-
-    if ( CheckCollision(ball1, ball2) ) {
-        // intersection point
-        var interx = ((ball1.posX * ball2.radius) + ball2.posX * ball1.radius)
-        / (ball1.radius + ball2.radius);
-        var intery = ((ball1.posY * ball2.radius) + ball2.posY  * ball1.radius)
-        / (ball1.radius + ball2.radius);
-
-        // show collision effect for 500 miliseconds
-        var intersectBall = svg.select('#' + ball1.id + '_intersect');
-        intersectBall.attr({ 'cx': interx, 'cy': intery, 'r': 5 ,'fill': 'black' })
-                    .transition()
-                    .duration(500)
-                    .attr('r', 0);
-
-        // calculate new velocity of each ball.
-        var vx1 = (ball1.vx * (ball1.weight - ball2.weight)
-            + (2 * ball2.weight * ball2.vx )) / (ball1.weight + ball2.weight);
-        var vy1 = (ball1.vy * (ball1.weight - ball2.weight)
-            + (2 * ball2.weight * ball2.vy)) / (ball1.weight + ball2.weight);
-        var vx2 = (ball2.vx * (ball2.weight - ball1.weight)
-            + (2 * ball1.weight * ball1.vx)) / (ball1.weight + ball2.weight);
-        var vy2 = (ball2.vy * (ball2.weight - ball1.weight)
-            + (2 * ball1.weight * ball1.vy)) / (ball1.weight + ball2.weight);
-
-        //set velocities for both balls
-        ball1.vx = vx1;
-        ball1.vy = vy1;
-        ball2.vx = vx2;
-        ball2.vy = vy2;
-
-        //ensure one ball is not inside others. distant apart till not colliding
-        while (CheckCollision(ball1, ball2)) {
-            ball1.posX += ball1.vx;
-            ball1.posY += ball1.vy;
-
-            ball2.posX += ball2.vx;
-            ball2.posY += ball2.vy;
-        }
-        ball1.Draw();
-        ball2.Draw();
-    }
-}
-
-function Initialize(containerId) {
-    var height = document.getElementById(containerId).clientHeight;
-    var width = document.getElementById(containerId).clientWidth;
-    gContainerId = containerId;
-    gCanvasId = containerId + '_canvas';
-    gTopGroupId = containerId + '_topGroup';
-    var svg = d3.select("#" + containerId).append("svg")
-        .attr("id", gCanvasId)
-        .attr("width", width)
-        .attr("height", height)
-        .append("g")
-        .attr("id", gTopGroupId)
-        .attr("x", 0)
-        .attr("y", 0)
-        .attr("width", width)
-        .attr("height", height)
-        .style("fill", "none")
-    //.attr("transform", "translate(" + 1 + "," + 1 + ")")
-    ;
-
-    balls.push(new Ball(svg, 501, 101, 'n1', '#83d3c9', Math.PI / 7, 35));
-    balls.push(new Ball(svg, 401, 41, 'n2', 'white', Math.PI + Math.PI / 7, 35));
+	//Gets the contact form
+	var modal = $('#myModal');
+	//Get the button that opens the contact form
+	var btn = $('#myBtn');
+	//Get the <span> element that closes the contact form
+	var span = $('.close');
 	
+	$(document).ready(function(){
+		//When the user clicks the button, open the form
+		btn.on('click', function(){
+			modal.show();
+		});
+		//When the user clicks on <span> (x), close the form
+		span.on('click', function(){
+			modal.hide();
+		});
 
-	for (var i = 0; i < balls.length; ++i) {
-        balls[i].Draw();
-    }
+	});
+	//When the user clicks anywhere outside of the form, close it
+	$('body').bind('click', function(event){
+		if ($(event.target).hasClass("modal")){
+				modal.hide();
+		}
+	});
 
-    return svg;
-}
+	//Gets the emission projects popup text
+	var ePopup = document.getElementById("emissionPopup");
+	var eBtn = document.getElementById("emissionBtn");
+
+	eBtn.onclick = function() {
+	ePopup.style.display = "block";
+	}
+
+	window.onclick = function(event) {
+	if (event.target == ePopup) {
+		ePopup.style.display = "none";
+	}
+	}
 
 
-	var startStop = null;
+	// Ball object - multiple balls can be created by instantiating new objects
+	function Ball(svg, x, y, id, color, aoa, weight) {
+		this.posX = x; // cx
+		this.posY = y; // cy
+		this.color = color;
+		this.radius = weight; // radius and weight same
+		this.jumpSize = 1; // equivalent of speed default to 1
+		this.svg = svg; // parent SVG
+		this.id = id; // id of ball
+		this.aoa = aoa; // angle of attack
+		this.weight = weight;
 
-	window.onload=function() {
-        document.getElementById("n1").addEventListener("click", begin);
-		document.getElementById("n2").addEventListener("click", begin);
-    }
+		if (!this.aoa)
+			this.aoa = Math.PI / 7;
+		if (!this.weight)
+			this.weight = 10;
+		this.radius = this.weight;
+
+		this.data = [this.id]; // allow us to use d3.enter()
+
+		var thisobj = this; // i like to use thisobj instead of this. this many times not reliable particularly handling evnet
+
+		// **** aoa is used only here -- earlier I was using to next move position.
+		// Now aoa and speed together is velocity 
+		this.vx = Math.cos(thisobj.aoa) * thisobj.jumpSize; // velocity x
+		this.vy = Math.sin(thisobj.aoa) * thisobj.jumpSize; // velocity y
+		this.initialVx = this.vx;
+		this.initialVy = this.vy;
+		this.initialPosX = this.posX;
+		this.initialPosY = this.posY;
+
+		// when speed changes, go to initial setting
+		this.GoToInitialSettings = function (newjumpSize) {
+			thisobj.posX = thisobj.initialPosX;
+			thisobj.posY = thisobj.initialPosY;
+			thisobj.vx = Math.cos(thisobj.aoa) * newjumpSize; // velocity x
+			thisobj.vy = Math.sin(thisobj.aoa) * newjumpSize; // velocity y
+			thisobj.Draw();
+		}
+
+		this.Draw = function () {
+			var svg = thisobj.svg;
+			var ball = svg.selectAll('#' + thisobj.id)
+						.data(thisobj.data)
+					;
+			ball.enter()
+				.append("circle")
+				.attr({"id" : thisobj.id, 'class' : 'ball', 'r' : thisobj.radius, 'weight' : thisobj.weight})
+				.style("fill", thisobj.color)
+				;
+			ball
+				//.transition()//.duration(50)
+				.attr("cx", thisobj.posX)
+				.attr("cy", thisobj.posY)
+			;
+			// intersect ball is used to show collision effect - every ball has it's own intersect ball
+			var intersectBall = ball.enter()
+								.append('circle')
+								.attr({ 'id': thisobj.id + '_intersect', 'class': 'intersectBall' });
+		}
+
+		this.Move = function () {
+			var svg = thisobj.svg;
+
+			//thisobj.posX += Math.cos(thisobj.aoa) * thisobj.jumpSize;
+			//thisobj.posY += Math.sin(thisobj.aoa) * thisobj.jumpSize;
+
+			thisobj.posX += thisobj.vx;
+			thisobj.posY += thisobj.vy;
+
+			if (parseInt(svg.attr('width')) <= (thisobj.posX + thisobj.radius)) {
+				thisobj.posX = parseInt(svg.attr('width')) - thisobj.radius - 1;
+				thisobj.aoa = Math.PI - thisobj.aoa;
+				thisobj.vx = -thisobj.vx;
+			}
+
+			if ( thisobj.posX < thisobj.radius) {
+				thisobj.posX = thisobj.radius+1;
+				thisobj.aoa = Math.PI - thisobj.aoa;
+				thisobj.vx = -thisobj.vx;
+			}
+
+			if (parseInt(svg.attr('height')) < (thisobj.posY + thisobj.radius)) {
+				thisobj.posY = parseInt(svg.attr('height')) - thisobj.radius - 1;
+				thisobj.aoa = 2 * Math.PI - thisobj.aoa;
+				thisobj.vy = -thisobj.vy;
+			}
+
+			if (thisobj.posY < thisobj.radius) {
+				thisobj.posY = thisobj.radius+1;
+				thisobj.aoa = 2 * Math.PI - thisobj.aoa;
+				thisobj.vy = -thisobj.vy;
+			}
+
+			// **** NOT USING AOA except during initilization. Just left this for future reference ***** 
+			if (thisobj.aoa > 2 * Math.PI)
+				thisobj.aoa = thisobj.aoa - 2 * Math.PI;
+			if (thisobj.aoa < 0)
+				thisobj.aoa = 2 * Math.PI + thisobj.aoa;
+
+			thisobj.Draw();
+		}
+	}
+
+	function CheckCollision(ball1, ball2) {
+		var absx = Math.abs(parseFloat(ball2.posX) - parseFloat(ball1.posX));
+		var absy = Math.abs(parseFloat(ball2.posY) - parseFloat(ball1.posY));
+
+		// find distance between two balls.
+		var distance = (absx * absx) + (absy * absy);
+		distance = Math.sqrt(distance);
+		// check if distance is less than sum of two radius - if yes, collision
+		if (distance < (parseFloat(ball1.radius) + parseFloat(ball2.radius))) {
+			return true;
+		}
+		return false;
+	}
+
+	var balls = []; // global array representing balls
+	var color = d3.scale.category20();
+
+	//courtsey thanks to several internet sites for formulas
+	//detect collision, find intersecting point and set new speed+direction for each ball based on weight (weight=radius)
+	function ProcessCollision(ball1, ball2) {
+
+		if (ball2 <= ball1)
+			return;
+		if (ball1 >= (balls.length-1) || ball2 >= balls.length )
+			return;
+
+		ball1 = balls[ball1];
+		ball2 = balls[ball2];
+
+		if ( CheckCollision(ball1, ball2) ) {
+			// intersection point
+			var interx = ((ball1.posX * ball2.radius) + ball2.posX * ball1.radius)
+			/ (ball1.radius + ball2.radius);
+			var intery = ((ball1.posY * ball2.radius) + ball2.posY  * ball1.radius)
+			/ (ball1.radius + ball2.radius);
+
+			// show collision effect for 500 miliseconds
+			var intersectBall = svg.select('#' + ball1.id + '_intersect');
+			intersectBall.attr({ 'cx': interx, 'cy': intery, 'r': 5 ,'fill': 'black' })
+						.transition()
+						.duration(500)
+						.attr('r', 0);
+
+			// calculate new velocity of each ball.
+			var vx1 = (ball1.vx * (ball1.weight - ball2.weight)
+				+ (2 * ball2.weight * ball2.vx )) / (ball1.weight + ball2.weight);
+			var vy1 = (ball1.vy * (ball1.weight - ball2.weight)
+				+ (2 * ball2.weight * ball2.vy)) / (ball1.weight + ball2.weight);
+			var vx2 = (ball2.vx * (ball2.weight - ball1.weight)
+				+ (2 * ball1.weight * ball1.vx)) / (ball1.weight + ball2.weight);
+			var vy2 = (ball2.vy * (ball2.weight - ball1.weight)
+				+ (2 * ball1.weight * ball1.vy)) / (ball1.weight + ball2.weight);
+
+			//set velocities for both balls
+			ball1.vx = vx1;
+			ball1.vy = vy1;
+			ball2.vx = vx2;
+			ball2.vy = vy2;
+
+			//ensure one ball is not inside others. distant apart till not colliding
+			while (CheckCollision(ball1, ball2)) {
+				ball1.posX += ball1.vx;
+				ball1.posY += ball1.vy;
+
+				ball2.posX += ball2.vx;
+				ball2.posY += ball2.vy;
+			}
+			ball1.Draw();
+			ball2.Draw();
+		}
+	}
+
+	function Initialize(containerId) {
+		var height = document.getElementById(containerId).clientHeight;
+		var width = document.getElementById(containerId).clientWidth;
+		gContainerId = containerId;
+		gCanvasId = containerId + '_canvas';
+		gTopGroupId = containerId + '_topGroup';
+		var svg = d3.select("#" + containerId).append("svg")
+			.attr("id", gCanvasId)
+			.attr("width", width)
+			.attr("height", height)
+			.append("g")
+			.attr("id", gTopGroupId)
+			.attr("x", 0)
+			.attr("y", 0)
+			.attr("width", width)
+			.attr("height", height)
+			.style("fill", "none")
+		//.attr("transform", "translate(" + 1 + "," + 1 + ")")
+		;
+
+		balls.push(new Ball(svg, 501, 101, 'n1', '#83d3c9', Math.PI / 7, 35));
+		balls.push(new Ball(svg, 401, 41, 'n2', 'white', Math.PI + Math.PI / 7, 35));
+		
+
+		for (var i = 0; i < balls.length; ++i) {
+			balls[i].Draw();
+		}
+
+		return svg;
+	}
+
+
+		var startStop = null;
+
+		window.onload=function() {
+			document.getElementById("n1").addEventListener("click", begin);
+			document.getElementById("n2").addEventListener("click", begin);
+		}
 
     function begin(){
        	
@@ -821,85 +818,85 @@ function Initialize(containerId) {
 	/* https://codepen.io/StrengthandFreedom/pen/QNgwvg */
 	
 	$(document).ready(function(){
-  			$("#spawnBall").toggle(
+		$("#spawnBall").toggle(
 
-    			function(){$("#spawnBall");
-				document.getElementById('spawnBall').innerHTML = "delete balls";
-        		b = 8;
-				balls = balls.slice(2);
-        
-        			for (var i = 0; i < b; ++i) {
-            			balls.push(new Ball(svg, 1000, 300, 'n'+(i+1).toString(), color(i),  Math.PI / (i+1), (35)));
-						//console.log(balls.slice(2));
-        			}
-			},
+			function(){$("#spawnBall");
+			document.getElementById('spawnBall').innerHTML = "delete balls";
+			b = 8;
+			balls = balls.slice(2);
+	
+				for (var i = 0; i < b; ++i) {
+					balls.push(new Ball(svg, 1000, 300, 'n'+(i+1).toString(), color(i),  Math.PI / (i+1), (35)));
+					//console.log(balls.slice(2));
+				}
+		},
 
-				function(){$("svg").remove();
-				document.getElementById('spawnBall').style.display = "none";}
-			);
-		});
+			function(){$("svg").remove();
+			document.getElementById('spawnBall').style.display = "none";}
+		);
+	});
 
 	
-		var svg = Initialize('banner');
-		begin();
+	var svg = Initialize('banner');
+	begin();
 
 
-		function displayMessage(){
-			document.getElementById('addMes').style.display = "block";
-		}
+	function displayMessage(){
+		document.getElementById('addMes').style.display = "block";
+	}
 
 
 		
-		//chart button toggle
-		function chartToggle(){
+	//chart button toggle
+	function chartToggle(){
 
-		$("#displayLine").click(
+	$("#displayLine").click(
 
-			function(){
-			$("#chartLine").css("display", "block")
+		function(){
+		$("#chartLine").css("display", "block")
 
-			$("#chartCicle,#chartMap,#chartBar").each(function(){
-				$(this).css("display", "none")
-			});
-			}
-		);
-
-		$("#displayCicle").click(
-
-			function(){
-			$("#chartCicle").css("display", "block")
-			
-			$("#chartLine,#chartMap,#chartBar").each(function(){
-				$(this).css("display", "none")
-			});
-			}
-		);
-
-		$("#displayMap").click(
-
-			function(){
-			$("#chartMap").css("display", "block")
-
-			$("#chartLine,#chartCicle,#chartBar").each(function(){
-				$(this).css("display", "none")
-			});
-			}
-		);
-
-		$("#displayBar").click(
-
-			function(){
-			$("#chartBar").css("display", "block")
-					
-			$("#chartLine,#chartCicle,#chartMap").each(function(){
-				$(this).css("display", "none")
-			});
-			}
-		);
-
+		$("#chartCicle,#chartMap,#chartBar").each(function(){
+			$(this).css("display", "none")
+		});
 		}
+	);
+
+	$("#displayCicle").click(
+
+		function(){
+		$("#chartCicle").css("display", "block")
+		
+		$("#chartLine,#chartMap,#chartBar").each(function(){
+			$(this).css("display", "none")
+		});
+		}
+	);
+
+	$("#displayMap").click(
+
+		function(){
+		$("#chartMap").css("display", "block")
+
+		$("#chartLine,#chartCicle,#chartBar").each(function(){
+			$(this).css("display", "none")
+		});
+		}
+	);
+
+	$("#displayBar").click(
+
+		function(){
+		$("#chartBar").css("display", "block")
+				
+		$("#chartLine,#chartCicle,#chartMap").each(function(){
+			$(this).css("display", "none")
+		});
+		}
+	);
+
+	}
 
 				
-		</script>
+	</script>
 
 </html>
