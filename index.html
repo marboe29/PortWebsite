@@ -853,57 +853,51 @@ function Initialize(containerId) {
 		//chart button toggle
 		function chartToggle(){
 
-			$("#displayLine").click(
+		$("#displayLine").click(
 
-				function(){
-				document.getElementById('chartLine').style.display = "block";
+			function(){
+			$("#chartLine").css("display", "block")
+
+			$("#chartCicle,#chartMap,#chartBar").each(function(){
+				$(this).css("display", "none")
+			});
+			}
+		);
+
+		$("#displayCicle").click(
+
+			function(){
+			$("#chartCicle").css("display", "block")
 			
-				if ($("#displayCicle,#displayMap,#displayBar").is(":visible")){
-					document.getElementById('chartCicle').style.display = "none";
-					document.getElementById('chartMap').style.display = "none";
-					document.getElementById('chartBar').style.display = "none";
-				}
+			$("#chartLine,#chartMap,#chartBar").each(function(){
+				$(this).css("display", "none")
 			});
+			}
+		);
 
-			$("#displayCicle").click(
+		$("#displayMap").click(
 
-				function(){
-				document.getElementById('chartCicle').style.display = "block";
+			function(){
+			$("#chartMap").css("display", "block")
 
-				if ($("#displayLine,#displayMap,#displayBar").is(":visible")){
-					document.getElementById('chartLine').style.display = "none";
-					document.getElementById('chartMap').style.display = "none";
-					document.getElementById('chartBar').style.display = "none";
-				}
+			$("#chartLine,#chartCicle,#chartBar").each(function(){
+				$(this).css("display", "none")
 			});
+			}
+		);
 
-			$("#displayMap").click(
+		$("#displayBar").click(
 
-				function(){
-				document.getElementById('chartMap').style.display = "block";
-
-				if ($("#displayLine,#displayCicle,#displayBar").is(":visible")){
-					document.getElementById('chartLine').style.display = "none";
-					document.getElementById('chartCicle').style.display = "none";
-					document.getElementById('chartBar').style.display = "none";
-				}
+			function(){
+			$("#chartBar").css("display", "block")
+					
+			$("#chartLine,#chartCicle,#chartMap").each(function(){
+				$(this).css("display", "none")
 			});
-
-			$("#displayBar").click(
-
-				function(){
-				document.getElementById('chartBar').style.display = "block";
-						
-				if ($("#displayLine,#displayCicle,#displayMap").is(":visible")){
-					document.getElementById('chartLine').style.display = "none";
-					document.getElementById('chartCicle').style.display = "none";
-					document.getElementById('chartMap').style.display = "none";
-				}
-			});
+			}
+		);
 
 		}
-
-
 
 				
 		</script>
