@@ -2598,8 +2598,8 @@ input, select, textarea {
 		background-size: 25em, 25em, auto, cover;
 		color: #fff;
 		cursor: default;
-		padding: 6em 0;
 		text-align: center;
+		padding: 0;
 	}
 
 		#banner .inner {
@@ -2618,6 +2618,10 @@ input, select, textarea {
 			padding: 3em;
 			text-align: center;
 			border-radius: 5px;
+			position: absolute; 
+			left: 25%; 
+			right: 25%; 
+			top:12.5%
 		}
 
 		
