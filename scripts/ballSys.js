@@ -7,8 +7,8 @@
     canvas.height = window.innerHeight / 2;
     
     const grad = ctx.createLinearGradient(0,0,0,canvas.height / 1);
-    grad.addColorStop(0,"#83d3c9");
-    grad.addColorStop(1,"#454545");
+    grad.addColorStop(0,"#341b2b");
+    grad.addColorStop(1,"#645862");
 
     let noOfBalls = 100;
     const ballsArray = [];
@@ -16,7 +16,7 @@
     class Ball {
 
         constructor(){
-        //math.random returns number between 0-1
+        
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
         this.radius = (Math.random() * 5);
@@ -28,9 +28,7 @@
             ctx.beginPath();
             ctx.arc(this.x,this.y,this.radius,0,Math.PI * 2);
             ctx.fillStyle = grad;
-            ctx.strokeStyle = "black";
             ctx.fill();
-            ctx.stroke();
         }
 
         update(){
