@@ -1,4 +1,4 @@
-# PortWebsite
+# Portfolio Website
 
 ## My site can be found here https://marboe29.github.io/PortWebsite
 
