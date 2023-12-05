@@ -40,6 +40,8 @@
 	</head>
 
 	<body class="index is-preload">
+
+
 	<div id="page-wrapper">
 
 	<!-- Header -->
@@ -47,8 +49,6 @@
 		<h1 id="logo"><a href="index.html"><span>Martin J Boer</span></a></h1>
 		<nav id="nav">
 			<ul>
-				<li class="current"><a href="#projects">Projects</a></li>
-				<li class="current"><a href="#clients">Work</a></li>
 				<li class="current"><a href="#cta">Contact</a></li>
 			</ul>
 		</nav>
@@ -59,10 +59,11 @@
 
 		<div class="inner">
 
-			<header>
-				<h2>Portfolio</h2>
+			<header class="special container">
+				<h2><strong>intro</strong></h2>
+				<p>Im Marty, i had grown up on a farm and found myself obtaining a bachelor's in IT. Iv always had a thing for understanding how things work and why, Sometimes geting to in detail is just unnecessary.
+				</p>
 			</header>
-			<p>My Development & Data showcase.</br> </p>
 			<!--
 			<footer>
 				<ul class="buttons stacked">
@@ -72,67 +73,45 @@
 			-->
 	
 		</div>
+
+		<canvas id="canvasOne" style="width: 100%;"></canvas>
+		<script type="text/javascript" src="scripts/ballSys.js"></script>
 		
-			<canvas id="canvasOne" style="width: 100%;"></canvas>
-			<script type="text/javascript" src="scripts/ballSys.js"></script>
-		
-	</section>
-
-	<!-- Main -->
-	<article id="main">
-
-		<header class="special container">
-			<h2>My <strong>intro</strong></h2>
-			<p>Im Marty, a ag-tech type of background with demanding skills,
-			<br/>
-			i find the engagement, results and interest to be a key part's for me.
-			<br/>
-			Here you will find freetime tasks and the work from my internship awhile back.
-			</p>
-		</header>
-
-	<!-- Sec 1 -->
-	<section class="wrapper style2 container special-alt">
-
-		<div class="visualbanner">
-		
-			<header><h2>Interactive <strong>data visualisation</strong></h2>
-				<p>D3.js chart</p>
-			</header>
-
-				<div>
-				<ul class="dataVizButtons" style="display: flex; list-style: none; cursor: pointer;">
-					<li><a class="chartBtn" id="displayLine" onclick="chartToggle()" style="text-decoration-line: underline;">Monthly temp</a></li>
-					<li><a class="chartBtn" id="displayCicle" onclick="chartToggle()" style="text-decoration-line: underline;">Yearly temp</a></li>
-					<li><a class="chartBtn" id="displayMap" onclick="chartToggle()" style="text-decoration-line: underline;">Monthly rainfull</a></li>
-					<li><a class="chartBtn" id="displayBar" onclick="chartToggle()" style="text-decoration-line: underline;">Yearly rainfull</a></li>					
-				</ul>
-				</div>
-
-					<iframe id="chartLine" src="dataviz/templine.html" width="100%" height="700px"></iframe>
-					<iframe id="chartCicle" style="display: none;" src="dataviz/tempcicle.html" width="100%" height="700px"></iframe>
-					<iframe id="chartMap" style="display: none;" src="dataviz/rainmap.html" width="100%" height="700px"></iframe>
-					<iframe id="chartBar" style="display: none;" src="dataviz/rainbar.html" width="100%" height="700px"></iframe>
-
-				<div style="text-align: center;">
-					<h3>Under construction</h3>
-				</div>
-		</div>
 		
 	</section>
 
-	</div>
 
 	<!-- Sec 2 -->
-	<section class="wrapper style1 container special" id="projects">
+	<section class="wrapper style1 container special">
+		
 
 		<header class="special container">
-			<h2>My <strong>projects</strong></h2>
-			<p>A range of work assesments to freetime task's
-			</p>
-		</header>
 
-		<div class="row">
+			<h2>My <strong>Showcase</strong></h2>
+
+			<p>A range of work assesments to freetime task's</p>
+
+			<div style="padding-top: 1em; text-align: left;">
+
+				<div class="dropdown-showcase" style="cursor: pointer;">
+	
+					<div class="dropdown-content">
+
+					<a id="index" onclick="chartToggle()">All</a>
+
+					<a id="displayProjects" onclick="chartToggle()">Projects</a>
+
+					<a id="displayWork" onclick="chartToggle()">Work</a>
+
+					</div>
+				  </div>
+
+				</div>
+
+		</header>
+		
+
+	<div class="row" id="projects">
 		<div class="col-4 col-12-narrower">
 
 			<section>
@@ -152,15 +131,16 @@
 				</div>
 																															
 				<header>
-					<h3>data modeling & SQL</h3>
+					<h3 id="sectionOne">data modeling & SQL</h3>
 				</header>
-				<p>XTREME Quality Cars Inc is an LMVD selling vehicles. 
+				<p id="sectionOne">XTREME Quality Cars Inc is an LMVD selling vehicles. 
 					They order vehicles from their main centre which resides in auckland then are shipped out to the outlet; 
 					vehicles are priced and placed on the lot for sale; 
 					and customers can purchase vehicles.</p>
 			</section>
 
 			</div>
+
 			<div class="col-4 col-12-narrower">
 			
 			<section>
@@ -182,9 +162,9 @@
 				</div>
 
 				<header>
-					<h3>excel data visualisation</h3>
+					<h3 id="sectionOne">excel data visualisation</h3>
 				</header>
-				<p>Greenhouse gas emissions statistics includes the emission types by industries 2007-2019.</p>
+				<p id="sectionOne">Greenhouse gas emissions statistics includes the emission types by industries 2007-2019.</p>
 
 				<!-- popup button -->
 				<a id="emissionBtn" style='cursor:pointer;'>Read more.</a>
@@ -198,7 +178,7 @@
 
 					<div id="eOneSection" onclick="eTextDropdown()">
 						<a id="eArrowOne" class="fa fa-arrow-right"></a>
-						<h3 class="eTitle"><strong>Instructions on how to run and view your visualisation</strong></h3>
+						<h3 class="eTitle"><strong>Instructions on how to run and view the visualisation</strong></h3>
 					</div>
 					
 					<div id="ePopupText" class="eTextContent">
@@ -313,6 +293,7 @@
 			</section>
 
 			</div>
+
 			<div class="col-4 col-12-narrower">
 
 				<section>
@@ -335,15 +316,17 @@
 					</div>
 
 					<header>
-						<h3>Job Lister</h3>
+						<h3 id="sectionOne">Job Lister</h3>
 					</header>
-					<p>A simple function to create, edit, delete and view by category. 
+					<p id="sectionOne">A simple function to create, edit, delete and view by category. 
 						This could also be used for a question bank, category could dropdown and select hardware related iusses.</p>
 				</section>
 
 			</div>
-		</div>
-		<div class="row">
+	</div>
+
+		<div class="row" id="work">
+
 			<div class="col-4 col-12-narrower">
 	
 				<section>
@@ -364,99 +347,95 @@
 					</div>
 																																
 					<header>
-						<h3>Web audio visualizer</h3>
+						<h3 id="sectionOne">Web audio visualizer</h3>
 					</header>
-					<p>Dealing with audio api i managed to create 3 types of viusals reacting to frequency data. 
+					<p id="sectionOne">Dealing with audio api i managed to create 3 types of viusals reacting to frequency data. 
 						It works by a analyzer node on a audio track which is stored in a type of array represented as decibel values for a specific frequency. Then applied to canvas elements.</p>
 				</section>
-	
-				</div>
+			</div>
+
+		
 				<div class="col-4 col-12-narrower">
 				
-				<section>
-				</section>
-	
-				</div>
-				<div class="col-4 col-12-narrower">
-	
-					<section>
-					</section>
-	
-				</div>
-			</div>
-	</section>
-
-	<!-- Sec 3 -->
-	<section class="wrapper style3 container special" id="clients">
-
-		<header class="major">
-			<h2>My <strong>work</strong></h2>
-		</header>
-
-		<div class="row">
-			<div class="col-6 col-12-narrower">
-
 				<section>
 					<a href="https://vetcarevets.co.nz" class="image featured" target="_blank">
 						<img src="images/vetcare.png" alt="vetcarevets"/>
 					</a>
 					<header>
-						<h3><a class="weblink" href="https://vetcarevets.co.nz" target="_blank">vetcarevets.co.nz</a></h3>
+						<h3><a class="weblink" href="https://vetcarevets.co.nz" target="_blank" id="sectionOne">vetcarevets.co.nz</a></h3>
 					</header>
-					<p>Offering general medical and animal surgery services as well as behaviour advice, senior pet checks, nail and dental checks and more. 
+					<p id="sectionOne">Offering general medical and animal surgery services as well as behaviour advice, senior pet checks, nail and dental checks and more. 
 						Assigned with a project manager & a given time assessment i build the site within wordpress including seo & dns setup.</p>
 				</section>
+				</div>
 
-			</div>
-			<div class="col-6 col-12-narrower">
+				<div class="col-4 col-12-narrower">
+	
+					<section>
+						<a href="https://www.mostwantedcheese.co.nz" class="image featured" target="_blank">
+							<img src="images/mostwantedcheese.png" alt="mostwantedcheese"/>
+						</a>
+						<header>
+							<h3><a class="weblink" href="https://www.mostwantedcheese.co.nz" target="_blank" id="sectionOne">mostwantedcheese.co.nz</a></h3>
+						</header>
+						<p id="sectionOne">Providing a lip smacking line up of cheese toasties from around the world as well as a selection of cheese inspired savoury and sweet treats, 
+							from catering to food franshiseing. Assigned with a project manager & a given time assessment i build the site within squarespace including seo & dns setup.</p>
+					
+					</section>
+	
+				</div>
+			
 
-				<section>
-					<a href="https://www.mostwantedcheese.co.nz" class="image featured" target="_blank">
-						<img src="images/mostwantedcheese.png" alt="mostwantedcheese"/>
-					</a>
-					<header>
-						<h3><a class="weblink" href="https://www.mostwantedcheese.co.nz" target="_blank">mostwantedcheese.co.nz</a></h3>
-					</header>
-					<p>Providing a lip smacking line up of cheese toasties from around the world as well as a selection of cheese inspired savoury and sweet treats, 
-						from catering to food franshiseing. Assigned with a project manager & a given time assessment i build the site within squarespace including seo & dns setup.</p>
-				</section>
+				<div class="col-4 col-12-narrower">
+		
+					<section>
+						
+						<a href="https://fishdigital.co.nz" class="image featured" target="_blank">
+							<img src="images/fishdigital.png" alt="fishdigital"/>
+						</a>
+						<header>
+							<h3><a class="weblink" href="https://fishdigital.co.nz" target="_blank" id="sectionOne">fishdigital.co.nz</a></h3>
+						</header>
+						<p id="sectionOne">Delivering digital marketing and digital commerce, businesses will learn how to for business by actioning a simple digital marketing blueprint.
+							Brand identity, website, social media, partners and activating and growing a loyal following. 
+							Build within wordpress including seo & dns setup.</p>
+						
+					</section>
+		
+					</div>
 
-			</div>
+					<div class="col-4 col-12-narrower">
+					
+					<section>
+
+						<a href="https://hopefish.org.nz" class="image featured" target="_blank">
+							<img src="images/hopefish.png" alt="hopefish"/>
+						</a>
+						<header>
+							<h3><a class="weblink" href="https://hopefish.org.nz" target="_blank" id="sectionOne">hopefish.org.nz</a></h3>
+						</header>
+						<p id="sectionOne">Developing a solidarity structure that delivers real support, real opportunity and real inclusion to socially disadvantaged women and their children. 
+							A charity co-creating a purposeful vision & walking alongside the activation effort. 
+							Build within wordpress included seo & dns setup.</p>
+						
+					</section>
+		
+					</div>
+
+					<div class="col-4 col-12-narrower">
+		
+						<section>
+							
+						
+						</section>
+		
+				</div>
+
 		</div>
-		<div class="row">
-			<div class="col-6 col-12-narrower">
-
-				<section>
-					<a href="https://fishdigital.co.nz" class="image featured" target="_blank">
-						<img src="images/fishdigital.png" alt="fishdigital"/>
-					</a>
-					<header>
-						<h3><a class="weblink" href="https://fishdigital.co.nz" target="_blank">fishdigital.co.nz</a></h3>
-					</header>
-					<p>Delivering digital marketing and digital commerce, businesses will learn how to for business by actioning a simple digital marketing blueprint.
-						Brand identity, website, social media, partners and activating and growing a loyal following. 
-						Build within wordpress including seo & dns setup.</p>
-				</section>
-
-			</div>
-			<div class="col-6 col-12-narrower">
-
-				<section>
-					<a href="https://hopefish.org.nz" class="image featured" target="_blank">
-						<img src="images/hopefish.png" alt="hopefish"/>
-					</a>
-					<header>
-						<h3><a class="weblink" href="https://hopefish.org.nz" target="_blank">hopefish.org.nz</a></h3>
-					</header>
-					<p>Developing a solidarity structure that delivers real support, real opportunity and real inclusion to socially disadvantaged women and their children. 
-						A charity co-creating a purposeful vision & walking alongside the activation effort. 
-						Build within wordpress included seo & dns setup.</p>
-				</section>
-
-			</div>
-		</div>
+			
 
 	</section>
+	
 
 	</article>
 
@@ -465,7 +444,7 @@
 
 		<header>
 			<h2>Get in <strong>contact</strong></h2>
-			<p>Information on projects, courses and jobs are very welcome.
+			<p>Anything to do with projects, roles and meeting up are welcome.
 			<a href="tel:0277260260" style="cursor: pointer;">0277260260</a> or email me at <a href="mailto:martinboer81@gmail.com" style="cursor: pointer;">martinboer81</a></p>
 		</header>
 
@@ -518,6 +497,8 @@
 	</div>-->
 
 	</section>
+
+</div>
 
 	<!-- Footer -->
 	<footer id="footer">
@@ -625,52 +606,56 @@
 	}
 
 
-	//chart button toggle
+	
 	function chartToggle(){
 
-	$("#displayLine").click(
+	$("#index").click(
 
 		function(){
-		$("#chartLine").css("display", "block")
 
-		$("#chartCicle,#chartMap,#chartBar").each(function(){
-			$(this).css("display", "none")
-		});
-		}
-	);
-
-	$("#displayCicle").click(
-
-		function(){
-		$("#chartCicle").css("display", "block")
+		$("#index").css({ "box-shadow": "0px 8px 16px 0px rgba(0,0,0,0.2)", "font-weight": "normal" })
 		
-		$("#chartLine,#chartMap,#chartBar").each(function(){
-			$(this).css("display", "none")
+		$("#work,#projects").each(function(){
+			$(this).css("display", "flex")
 		});
+
+		$("#displayProjects,#displayWork").each(function(){
+			$(this).css({"box-shadow":"none", "font-weight": "unset"})
+		});
+
 		}
 	);
 
-	$("#displayMap").click(
+	$("#displayProjects").click(
 
 		function(){
-		$("#chartMap").css("display", "block")
-
-		$("#chartLine,#chartCicle,#chartBar").each(function(){
+			/*font-weight: bold;*/
+		$("#projects").css("display", "flex")
+		$("#displayProjects").css({ "box-shadow": "0px 8px 16px 0px rgba(0,0,0,0.2)", "font-weight": "normal" })
+		
+		$("#work").each(function(){
 			$(this).css("display", "none")
+			$("#displayWork").css({"box-shadow":"none", "font-weight": "unset"})
+			$("#index").css({"box-shadow":"none", "font-weight": "unset"})
 		});
 		}
 	);
 
-	$("#displayBar").click(
+	$("#displayWork").click(
 
 		function(){
-		$("#chartBar").css("display", "block")
-				
-		$("#chartLine,#chartCicle,#chartMap").each(function(){
+
+		$("#work").css("display", "flex")
+		$("#displayWork").css({ "box-shadow": "0px 8px 16px 0px rgba(0,0,0,0.2)", "font-weight": "normal" })
+
+		$("#projects").each(function(){
 			$(this).css("display", "none")
+			$("#displayProjects").css({"box-shadow":"none", "font-weight": "unset"})
+			$("#index").css({"box-shadow":"none", "font-weight": "unset"})
 		});
 		}
 	);
+
 
 	}
 
