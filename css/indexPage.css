@@ -70,6 +70,7 @@ background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 /* Modal Content */
 .ePopupContent {
 background-color: #fefefe;
+border-radius: 0.5%;
 margin: auto;
 padding: 20px;
 border: 1px solid #888;
