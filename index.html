@@ -35,6 +35,7 @@
 	
 
 	<style>
+		
 	</style>
 
 	</head>
@@ -49,10 +50,19 @@
 		<h1 id="logo"><a href="index.html"><span>Martin J Boer</span></a></h1>
 		<nav id="nav">
 			<ul>
-				<li class="current"><a href="#cta">Contact</a></li>
+				<li class="current">
+					<a href="#cta">Contact</a>
+				</li>
+				<li class="current">
+					<a href="#About">About me</a>
+				</li>
 			</ul>
 		</nav>
 	</header>
+
+
+	<canvas id="canvasOne" style="width: 100%;"></canvas>
+	<script type="text/javascript" src="scripts/ballSys.js"></script>
 			
 	<!-- Banner -->
 	<section id="banner">
@@ -61,8 +71,9 @@
 
 			<header class="special container">
 				<h2><strong>intro</strong></h2>
-				<p>Im Marty, iv grown up on a farm and found myself pursuing tech. Here you will find examples of some of my work. Iv always had a thing for understanding how things work and why, as well as being persistenct in everythink i do.
-				</p>
+				<p class="fa fa-window-maximize"> Websites</p><br>
+				<p class="fa fa-area-chart"> Dashboards</p>
+				<p class="fa fa-database"> SQL</p>
 			</header>
 			<!--
 			<footer>
@@ -73,9 +84,6 @@
 			-->
 	
 		</div>
-
-		<canvas id="canvasOne" style="width: 100%;"></canvas>
-		<script type="text/javascript" src="scripts/ballSys.js"></script>
 		
 		
 	</section>
@@ -323,9 +331,6 @@
 				</section>
 
 			</div>
-	</div>
-
-		<div class="row" id="work">
 
 			<div class="col-4 col-12-narrower">
 	
@@ -353,6 +358,10 @@
 						It works by a analyzer node on a audio track which is stored in a type of array represented as decibel values for a specific frequency. Then applied to canvas elements.</p>
 				</section>
 			</div>
+
+	</div>
+
+		<div class="row" id="work">
 
 		
 				<div class="col-4 col-12-narrower">
@@ -439,14 +448,29 @@
 
 	</article>
 
+	<!-- About -->
+	<section id="About">
+	<div>
+		<header>
+			<h2>About <strong>me</strong></h2>
+			<p style="padding-left: 20%; padding-right: 20%;">Im Marty, i grew up on a farm and tech has always been a big passion of mine. 
+				Iv always had a thing for understanding how things work and why, as well as being persistenct at things of interest. 
+				I like the idea of agriculture and how its advanced with automation, scanners and statistics. Creating insights, analysing data, or a simple webpage.</p>
+		</header>
+	</div>
+	</section>
+
 	<!-- CTA -->
 	<section id="cta">
 
+
+	<div id="ContactCTA">
 		<header>
 			<h2>Get in <strong>contact</strong></h2>
 			<p>Anything to do with projects, roles and meeting up are welcome.
 			<a href="tel:0277260260" style="cursor: pointer;">0277260260</a> or email me at <a href="mailto:martinboer81@gmail.com" style="cursor: pointer;">martinboer81</a></p>
 		</header>
+	</div>	
 
 		<!--<footer>
 			<ul class="buttons">
@@ -658,6 +682,7 @@
 
 
 	}
+
 
 				
 	</script>
