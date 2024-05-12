@@ -437,7 +437,6 @@ input, select, textarea {
 		flex-wrap: wrap;
 		box-sizing: border-box;
 		align-items: stretch;
-
 		background: rgba(52, 27, 43, 0.5);
 		border-radius: 5px;
 	}
