@@ -15,7 +15,7 @@ function eTextDropdownThree(){
 		var ePopup = document.getElementById("emissionPopup");
 		var eBtn = document.getElementById("emissionBtn");
 
-		eBtn.onclick = function() {
+		eBtn.click = function() {
 		ePopup.style.display = "block";
 		}
 

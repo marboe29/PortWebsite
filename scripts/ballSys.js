@@ -4,11 +4,11 @@
     const ctx = canvas.getContext('2d');
 
     canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight / 2;
+    canvas.height = window.innerHeight /2;
     
-    const grad = ctx.createLinearGradient(0,0,0,canvas.height / 1);
+    const grad = ctx.createLinearGradient(0,0,0,canvas.height);
     grad.addColorStop(0,"#341b2b");
-    grad.addColorStop(1,"#645862");
+    grad.addColorStop(0.5,"#70676F");
 
     let noOfBalls = 100;
     const ballsArray = [];
@@ -71,6 +71,6 @@
 
     window.addEventListener('resize', function(){
     canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight / 2;
+    canvas.height = window.innerHeight;
     })
     
