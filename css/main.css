@@ -132,8 +132,8 @@ input, select, textarea {
 		font-weight: 300;
 		line-height: 1.75em;
 		margin-bottom: 0.5em;
-		text-transform: uppercase;
-		font-family: monospace;
+		/*text-transform: uppercase;
+		font-family: monospace;*/
 	}
 
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -157,9 +157,14 @@ input, select, textarea {
 		color: white;
 	}
 
-	#about {
-		padding: 10px;
-    	box-shadow: 5px 10px #E8EEF4;
+	#About {
+		color: #fff;
+		padding-bottom: 5em;
+		text-align: center;
+	}
+
+	html{
+		scroll-behavior: smooth;
 	}
 
 	.dropdown-showcase {
@@ -432,6 +437,9 @@ input, select, textarea {
 		flex-wrap: wrap;
 		box-sizing: border-box;
 		align-items: stretch;
+
+		background: rgba(52, 27, 43, 0.5);
+		border-radius: 5px;
 	}
 
 		.row > * {
@@ -2640,7 +2648,7 @@ input, select, textarea {
 			color: #fff;
 			/*display: inline-block;*/
 			opacity: 0;
-			padding: 3em;
+			padding: 2em;
 			text-align: center;
 			border-radius: 5px;
 			left: 25%; 
@@ -2657,7 +2665,7 @@ input, select, textarea {
 
 			#banner .inner header {
 				display: inline-block;
-				margin: 0 0 2em 0;
+				/*margin: 0 0 2em 0;*/
 				padding: 3px 0 3px 0;
 			}
 
@@ -2668,7 +2676,7 @@ input, select, textarea {
 					margin: 0;
 					padding-left: 0.05em;
 					position: relative;
-					text-transform: uppercase;
+				
 				}
 
 			#banner .inner p {
@@ -2716,12 +2724,12 @@ input, select, textarea {
 	#cta {
 		background-attachment: scroll, scroll, scroll, fixed;
 		background-color: #645862;
-		background-image: url("images/light-tl.svg"), url("images/light-tr.svg"), url("images/overlay.png"), url("../../images/banner.jpg");
+		background-image: url("images/light-tl.svg"), url("images/light-tr.svg"), url("images/overlay.png");
 		background-position: top left, top right, top left, bottom center;
 		background-repeat: no-repeat, no-repeat, repeat, no-repeat;
 		background-size: 25em, 25em, auto, cover;
 		color: #fff;
-		padding: 5em;
+		padding: 4em;
 		text-align: center;
 	}
 
